@@ -114,3 +114,143 @@ header {
 
 #gnb>li:hover ul {left: 205px;
     opacity: 1;}
+    /* 자바스크립트의 경우 건바이건으로 지정해서 불러줘야 하지만, 
+    CSS의 경우는 부모가 자손을 무조건 불러낼 수 있으므로 
+    한번으로 여러개를 설정할 수 있는 장점이 있다. */
+
+
+
+/* txt 박스 설정 */
+
+.txtBox {
+    position: fixed;
+    right: 70px;
+    width: 340px;
+    height: 250px;
+    top: 50%;
+    margin-top: -180px;}
+
+.txt {
+    font-size: 34px;
+    font-family: 'Play', sans-serif;
+    color: #bbb;
+    letter-spacing: -2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;}
+
+.txt b {
+    margin-left: 20px;
+    color: #b9fb05;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;}
+
+.big {
+    font-size: 160px;
+    font-family: 'Monoton', cursive;
+    color: #b9fb05;
+    letter-spacing: -1px;}
+
+.big em {font-family: 'Play', sans-serif;
+    font-size: 50px;
+    color: #fff;}
+
+
+
+/* 사이드 설정 */
+.side {
+    position: fixed;
+    right: -800px; /* 설정 후 변경 -800px*/
+    bottom: 0;
+    background-color: #111;
+    width: 800px;
+    height: 100%;
+    transform: skewX(-40deg);
+    opacity: 0.5;
+    transition: all 0.5s;}
+
+.side div {
+    background-color: #000;
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left:150px;
+    background-origin: 0;
+    transition: all 1s;}
+
+
+.side p {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    transition: all 0.8s;}
+
+.side em {
+    color: #a0bd50;
+    display: block;
+    transform: skewX(40deg);}
+
+.side img {}
+
+.side p:nth-child(1) {
+    bottom:270px;
+    left: 50px;
+    transform: translate(400px)}
+
+.side p:nth-child(2) {
+    bottom: 160px;
+    left: 50px;
+    transform: translate(300px)}
+
+.side p:nth-child(3) {
+    bottom: 50px;
+    left: 50px;
+    transform: translate(200px)}
+
+.side article {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    width: 150px;
+    height: 50px;
+    transform: skewX(40deg);
+    transition: all 0.5s;}
+
+.side i {
+    color: #b9fb05;
+    font-size: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: ani 1.5s infinite;}
+
+.side i:nth-child(1) {animation-delay: 0s;}
+.side i:nth-child(2) {animation-delay:0.5s;}
+.side i:nth-child(3) {animation-delay: 1s;}
+
+
+.side:hover {right: -500px;}
+
+.side:hover div {left: 50px;}
+
+.side:hover p {transform: translate(0);}
+
+.side:hover article {left: 2000px;}
+
+
+
+
+
+/* 애니메이션 만들기 */
+@keyframes ani {
+    0% {right:0;
+        transform: scale(1);
+       opacity: 1;}
+
+    100% {right:100px;
+        transform: scale(1.5);
+        opacity:0;}
+}
+
+
+

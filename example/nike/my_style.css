@@ -1,0 +1,64 @@
+/* 언어 설정 */
+@charset 'utf-8';
+
+
+/* 전체 설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {color: black;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+/* 기본 설정 */
+body {
+    background-color: #111;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;}
+
+/* font-family: 'Monoton', cursive;
+font-family: 'Play', sans-serif; */
+
+
+/* 배경 설정 */
+.vid {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;}
+
+.vid video {
+    width: 100%;
+    min-width: 1600px;}
+
+
+
+/* 로고 설정 */
+.logo {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    z-index: 100;}
+
+.logo img {
+    width: 280px;
+    height: auto;}
+
+
+/* 헤더 설정 */
+header {}
+
+nav {}
+
+#gnb {}
+
+#gnb>li {}
+
+#gnb>li>a {}
+
+#gnb>li>a>em {}
