@@ -1,0 +1,151 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #fff;}
+img {vertical-align: bottom;
+    border: none;}
+
+
+/* 기본설정 */
+body {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #666;}
+
+
+
+/* 랩 설정 */
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;}
+
+
+
+/* 메뉴 버튼 */
+.btn {
+    color: #fff;
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    font-size: 40px;
+    z-index: 3;}
+
+
+/* 네비 설정 */
+nav {
+    position: fixed;
+    background-color: rgb(90, 90, 90);
+    height: 100%;
+    width: 150px;
+    z-index: 2;
+    opacity: 0.8;}
+
+nav h1 {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    top: 80px;
+    margin-left: -50px;}
+
+nav h1 img {
+    width: 100%;
+    height: auto;}
+
+nav ul {
+    position: absolute;
+    top: 200px;
+    width: 100%;}
+
+nav li {}
+
+nav ul li a {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    line-height: 4;
+    text-align: center;}
+
+
+
+/* 섹션 설정 */
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;}
+
+section>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;}
+
+.box1 {}
+
+.box2 {}
+
+.box3 {}
+
+
+
+
+
+/* 박스 1 설정 */
+.box1>p {float: left;}
+
+.box1>p:nth-child(1) {
+    background-color: rgb(168, 139, 139);
+    width: 50%;
+    height: 100%;}
+
+.box1>p:nth-child(2) {
+    background-color: rgb(92, 78, 78);
+    }
+
+.box1>p:nth-child(3) {}
+.box1>p:nth-child(4) {}
+.box1>p:nth-child(5) {}
+.box1>p:nth-child(6) {}
+.box1>p:nth-child(7) {}
+.box1>p:nth-child(8) {}
+.box1>p:nth-child(9) {}
+.box1>p:nth-child(10) {}
+.box1>p:nth-child(11) {}
+
+
+
+
+/* 박스 2 설정 */
+.box2>p:nth-child(1) {}
+.box2>p:nth-child(2) {}
+.box2>p:nth-child(3) {}
+.box2>p:nth-child(4) {}
+.box2>p:nth-child(5) {}
+.box2>p:nth-child(6) {}
+.box2>p:nth-child(7) {}
+.box2>p:nth-child(8) {}
+.box2>p:nth-child(9) {}
+.box2>p:nth-child(10) {}
+.box2>p:nth-child(11) {}
+
+
+
+
+/* 박스 3 설정 */
+.box3>p:nth-child(1) {}
+.box3>p:nth-child(2) {}
+.box3>p:nth-child(3) {}
+.box3>p:nth-child(4) {}
+.box3>p:nth-child(5) {}
+.box3>p:nth-child(6) {}
+.box3>p:nth-child(7) {}
+
+
+
+
+

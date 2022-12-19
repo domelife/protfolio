@@ -1,0 +1,164 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #ddd;}
+img {border: none;
+    vertical-align: bottom;}
+
+/* 기본설정 */
+body {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #111;}
+
+
+/* 랩 설정 */
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;}
+
+
+/* 메뉴버튼 */
+.btnMenu {
+    color: #fff;
+    font-size: 40px;
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    z-index: 3;}
+
+.btnMenu i {}
+
+
+/* 내비 설정 */
+nav {
+    position: fixed;
+    background-color: #eee;
+    height: 100%;
+    width: 150px;
+    z-index: 2;}
+
+nav h1 {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 80px;}
+
+nav h1 img {
+    width: 100%;
+    height: auto;}
+
+#gnb {position: absolute;
+    top: 200px;
+    width: 100%;}
+
+#gnb li {}
+
+#gnb a {
+    display: block;
+    font-size: 18px;
+    line-height: 4;
+    text-align: center;
+    color: #000;
+}
+
+
+/* 섹션 설정 */
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;}
+
+section>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;}
+
+.box1 {background-color:aqua;}
+
+.box2 {background-color: skyblue;}
+
+.box3 {background-color: pink;}
+
+section>div.on {
+    opacity: 1;
+    z-index: 3;}
+
+
+
+/* 박스 1 설정 */
+.box1>p:nth-child(1) {}
+.box1>p:nth-child(2) {}
+.box1>p:nth-child(3) {}
+.box1>p:nth-child(4) {}
+.box1>p:nth-child(5) {}
+.box1>p:nth-child(6) {}
+.box1>p:nth-child(7) {}
+.box1>p:nth-child(8) {}
+.box1>p:nth-child(9) {}
+.box1>p:nth-child(10) {}
+.box1>p:nth-child(11) {}
+
+/* 박스 2 설정 */
+.box2>p:nth-child(1) {}
+.box2>p:nth-child(2) {}
+.box2>p:nth-child(3) {}
+.box2>p:nth-child(4) {}
+.box2>p:nth-child(5) {}
+.box2>p:nth-child(6) {}
+.box2>p:nth-child(7) {}
+.box2>p:nth-child(8) {}
+.box2>p:nth-child(9) {}
+.box2>p:nth-child(10) {}
+.box2>p:nth-child(11) {}
+
+
+
+/* 박스 3 설정 */
+.box3>p {
+    float: left;}
+
+.box3>p:nth-child(1) {
+    background-color: #ddd;
+    width: 50%;
+    height: 100%;}
+
+.box3>p:nth-child(2) {
+    background-color: #ccc;
+    width: 25%;
+    height: 25%;}
+
+.box3>p:nth-child(3) {
+    background-color: #bbb;
+    width: 25%;
+    height: 25%;}
+
+.box3>p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 25%;}
+
+.box3>p:nth-child(5) {
+    background-color: #111;
+    width: 25%;
+    height: 50%;}
+
+.box3>p:nth-child(6) {
+    background-color: #222;
+    width: 25%;
+    height: 25%;}
+
+.box3>p:nth-child(7) {
+    background-color: #333;
+    width: 25%;
+    height: 25%;}
+
