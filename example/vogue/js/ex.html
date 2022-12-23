@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 예제</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <h1>this 문</h1>
+    <p>이벤트가 일어난 주체를 바로 선택해 주는 기능</p>
+
+    <ul id="menu1">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+
+    <div class="wrapper">
+        <ul id="menu2">
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul>
+    
+        <div class="box">
+            <p>but sometimes it's alright (It's alright)
+                So I'ma let go of things I can't control
+                Let it go (Oh-oh-oh), let it go (Oh-oh-oh)</p>
+            <p>lYeah-yeah, yeah (Another one)
+                Yeah-yeah, yeah (DJ Khaled), uh
+                I gotta, I gotta, I gotta make my mind up
+                I'm gon' grind, gon' shine until my time's up
+                I got money on my mind,
+                is that a crime, yeah?</p>
+            <p>Yeah-yeah, yeah (Yeah)
+                Yeah-yeah, yeah
+                Yeah-yeah, yeah (We The Best Music)
+                Yeah-yeah, yeah
+                Yeah-yeah, yeah (Another one)
+                Yeah-yeah, yeah (DJ Khaled), u</p>
+            <p>Don't wanna go back to the days
+                when I was broke
+                But, girl, you my priority (Woo)
+                And I'll put your heart way over me</p>
+            <p>(On God)
+                Don't play a sport, but I ball (21),
+                answer the phone when I call (21)
+                I get up whenever I fall, don't try me,
+                it's gonna end up in a brawl (On God)</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <style>
+        /* 래퍼 설정 */
+        .wrapper {
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: center;}
+
+
+        /* 메뉴 2 설정 */
+        #menu2 {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: center;}
+        
+        #menu2 li {
+            padding: 10px 30px;
+            border: 1px solid #000;
+            cursor: pointer;}
+
+
+        /* 박스 설정 */
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box>p {
+            position: absolute;
+            display: none;
+            width: 800px;
+            height: 800px;
+            left: 50%;
+            margin-left: -400px;
+            margin-bottom: 200px;
+            color: #fff;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center ;}
+
+        .box>p:nth-child(1) {
+            background-image: url(ex_img/다운로드.jpg);}
+        
+        .box>p:nth-child(2) {
+            background-image: url(ex_img/다운로드\ \(1\).jpg);}
+
+        .box>p:nth-child(3) {
+            background-image: url(ex_img/다운로드\ \(2\).jpg);}
+
+        .box>p:nth-child(4) {
+            background-image: url(ex_img/다운로드\ \(4\).jpg);}
+
+        .box>p:nth-child(5) {
+            background-image: url(ex_img/다운로드\ \(5\).jpg);}
+
+        .box>p:hover {}
+    </style>
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+
+            //menu1 안에 있는 리스트를 클릭했을 때 내 자신의 색깔이 바뀌어라.
+
+            $('#menu1 li:nth-child(1)').click(function(){
+                
+                $(this).css({'color':'red'})
+            });
+
+            $('#menu1 li').click(function(){
+
+                $(this).css({'color':'red'})
+
+                let i =$(this).index()
+                console.log(i)
+
+            })
+
+        
+
+
+            // menu2 안에 있는 li를 클릭해서 순번을 찾아라.
+                // box안에 p의 순번을 li의 순번과 동일하게 보여라.
+                // 클릭한 li 자신의 스타일을 바꾸어라.
+
+                $('#menu2 li').click(function(){
+
+                    let ab = $(this).index();
+                    console.log(ab);
+
+                    $('.box p').css({'display':'none'})
+                    $('.box p').eq(ab).css({'display': 'block'})
+                })
+
+        })
+    </script>
+
+
+
+</body>
+</html>
