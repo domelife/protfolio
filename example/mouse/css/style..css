@@ -8,7 +8,7 @@ img {vertical-align: bottom;
     border: none;}
 
 
-body {background-color: rgb(36, 17, 53);
+/* body {background-color: rgb(36, 17, 53);
     color: #fff;}
 
 
@@ -35,5 +35,58 @@ ul {
     left: 0;
     bottom: 0;
 
-    font-size: 20px;}
+    font-size: 20px;} */
 
+body {background-color: rgb(57, 18, 94);
+    width: 100%;}
+
+.box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.box p {
+    font-size: 28px;
+    color: #fff;
+    line-height: 2;}
+
+.box span {
+    border-bottom: dashed 3px #fff;
+    display: inline-block;
+    padding-bottom: 1px;}
+
+
+
+.count {
+    position: fixed;
+    font-size: 30px;
+    font-weight: bold;
+    right: 150px;
+    top: 50px;
+    color: #fff;}
+
+.cursor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid #fff;
+    left: 0;
+    top: 0;
+    transition: background-color 0.5s, border-color 0.5s, border-radius 0.5s, transform 0.5s;
+    pointer-events: none; /* 관통해서 클릭해라*/}
+
+
+.cursor.style1 {
+    background-color: rgba(255, 165, 0, 0.4);
+    border-color: orange;}
+
+.cursor.style2 {
+    border-radius: 0;
+    transform: rotate(360deg);
+}
