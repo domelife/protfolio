@@ -1,0 +1,73 @@
+@charset 'utf-8';
+
+
+/* 전체 설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+/* 헤더 설정 */
+header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    top: 00;
+    background-color:rgb(153, 129, 97);}
+
+ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+li {
+    display: flex;
+    cursor: pointer;
+    width: 12.5%;
+    height: 100%;
+}
+
+a {
+    display: block;
+    color: #fff;
+    font-size: 20px;}
+
+
+header li:hover {
+    background-color: rgb(99, 90, 66);
+    font-size: 40px;}
+
+
+
+/* 섹션 설정 */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    width: 100%;
+    height: 1200px;
+    font-size: 50px;
+    font-weight: bold;}
+
+
+
+section:nth-child(1) {background-color :rgb(134, 204, 88);}
+
+section:nth-child(2) {background-color :rgb(255, 233, 110);}
+section:nth-child(3) {background-color :rgb(255, 0, 0);}
+section:nth-child(4) {background-color :rgb(255, 188, 199);}
+section:nth-child(5) {background-color :rgb(66, 65, 57);}
+section:nth-child(6) {background-color :rgb(236, 160, 252);}
+section:nth-child(7) {background-color :rgb(191, 228, 176);}
+section:nth-child(8) {background-color :rgb(113, 38, 148);}
+
+
+

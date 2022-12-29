@@ -78,4 +78,64 @@ $(document).ready(function(){
         $('.p42').css({'bottom': -180-poseY/30, 'right': -poseX/30})
 
     })
+
+
+
+
+    // 스크롤바의 위치값 찾아내기
+    $(window).scroll(function(){
+
+        let sc = $(this).scrollTop();
+
+        $('h1').text(sc)
+
+        // 애니메이트 작성법, animate({속성명:속성값;},지속시간);
+
+    })
+
+    // li를 클릭했을 때, scrollTop을 해당 높이로 가게 만들어라.
+    $('#gnb li').click(function(){
+
+        // 클릭했을 때 나의 순번찾기
+        let i = $(this).index();
+
+        let ht = $(window).height();
+
+        $('html, body').animate({'scrollTop':ht*i}, 1400,'easeOutBounce')
+    })
+
+
+
+    // h1에 마우스가 들어갔을 때 나의 위치값을 찾아라.
+    $('h1').mouseenter(function(){
+
+        let abc = $(this).offset().top
+        alert(abc)
+    })
+
+
+
+
+    //마우스에서 휠을 올렸을 떄, 내렸을 떄 움직인다.
+    $('section').mousewheel(function(event,delta){
+
+        if(delta>0) {
+
+            //이전페이지로 이동
+            let prev = $(this).prev().offset().top;
+            $('html, body').stop().animate({scrollTop:prev}, 1400, 'easeOutBounce')
+        }
+
+        else if(delta<0) {
+
+            //다음페이지로 이동
+            let next = $(this).next().offset().top;
+            $('html, body').stop().animate({scrollTop:next}, 1400, 'easeOutBounce')
+        }
+    })
+
+
+
+
+
 })
