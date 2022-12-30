@@ -12,10 +12,10 @@ img {border: none;
 /* 헤더 설정 */
 header {
     width: 100%;
-    height: 120px;
+    height: 150px;
     position: fixed;
     left: 0;
-    top: 00;
+    top: 0;
     background-color:rgb(153, 129, 97);}
 
 ul {
@@ -24,11 +24,13 @@ ul {
     height: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
+    flex-flow: wrap;
 }
 
 li {
     display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     width: 12.5%;
     height: 100%;
@@ -41,14 +43,20 @@ a {
 
 
 header li:hover {
-    background-color: rgb(99, 90, 66);
-    font-size: 40px;}
+    background-color: rgb(99, 90, 66);}
 
+header li:hover a {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(77, 64, 37);
+}
 
 
 /* 섹션 설정 */
+
 section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #000;
@@ -60,14 +68,24 @@ section{
 
 
 section:nth-child(1) {background-color :rgb(134, 204, 88);}
-
 section:nth-child(2) {background-color :rgb(255, 233, 110);}
-section:nth-child(3) {background-color :rgb(255, 0, 0);}
+section:nth-child(3) {background-color :rgb(221, 41, 41);}
 section:nth-child(4) {background-color :rgb(255, 188, 199);}
-section:nth-child(5) {background-color :rgb(66, 65, 57);}
+section:nth-child(5) {background-color :rgb(100, 98, 85);}
 section:nth-child(6) {background-color :rgb(236, 160, 252);}
 section:nth-child(7) {background-color :rgb(191, 228, 176);}
-section:nth-child(8) {background-color :rgb(113, 38, 148);}
+section:nth-child(8) {background-color :rgb(251, 255, 190);}
+
+
+
+/* 클래스값 부여 */
+header li.on {
+    background-color: rgb(99, 90, 66);}
+
+header li.on a {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(77, 64, 37);}
 
 
 

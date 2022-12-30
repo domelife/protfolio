@@ -89,7 +89,44 @@ $(document).ready(function(){
 
         $('h1').text(sc)
 
-        // 애니메이트 작성법, animate({속성명:속성값;},지속시간);
+        
+        let ht = $(window).height();
+
+        // if(sc>=0 && sc<ht){
+
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(0).addClass('on')
+        // }
+
+        // if(sc>=ht && sc<ht*2){
+
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(1).addClass('on')
+        // }
+
+        // if(sc>=ht*2 && sc<ht*3){
+
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(2).addClass('on')
+        // }
+
+        // if(sc>=ht*3 && sc<ht*4){
+
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(3).addClass('on')
+        // }
+
+
+        //반복문 설정
+        for(var ab=0; ab<5; ab++) {
+
+            if(sc>=ht*ab && sc<ht*(ab+1)){
+
+                $('#gnb li').removeClass('on')
+                $('#gnb li').eq(ab).addClass('on')
+            }
+        }
+
 
     })
 
@@ -101,6 +138,13 @@ $(document).ready(function(){
 
         let ht = $(window).height();
 
+
+        //클릭했을 때 나에게 클래스 on값을 붙여라.
+        $('gnb li').removeClass('on')
+        $(this).addClass('on')
+
+
+    // 애니메이트 작성법, animate({속성명:속성값;},지속시간);
         $('html, body').animate({'scrollTop':ht*i}, 1400,'easeOutBounce')
     })
 
@@ -131,6 +175,7 @@ $(document).ready(function(){
             //다음페이지로 이동
             let next = $(this).next().offset().top;
             $('html, body').stop().animate({scrollTop:next}, 1400, 'easeOutBounce')
+            //animate 앞에는 stop을 항상 짝궁처럼 붙여다니기
         }
     })
 
