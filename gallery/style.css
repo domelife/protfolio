@@ -1,0 +1,73 @@
+@charset 'utf-8';
+
+/* 전체 설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+img {border: none; vertical-align: bottom;}
+
+
+
+/* wrap 설정 */
+#gallery {
+    width: 800px;
+    height: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 300px;}
+
+
+
+/* 박스이미지 설정 */
+#image {
+    width: 760px;
+    height: 470px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;}
+
+#image p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;}
+
+    #image>p:nth-child(1) {display: block;}
+
+#image p img {}
+
+
+
+/* 컨테이너 설정 */
+#thumbnail {
+    display: flex;
+    align-items: center;
+    width: 760px;
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;}
+
+
+.container {
+    width: 730px;
+    height: 75px;
+    overflow: hidden;
+    position: relative;}
+
+.container ul {
+    display: flex;
+    position: absolute;
+    width:2440px ;
+    left:0px;
+    top: 0;
+    transition: all 0.8s;}
+
+    .container li {margin-right: 1.7px;}
+
+    /* 좌우버튼설정 */
+    .left {margin-right: 2px;}
+    .right {margin-left: 2px;}
+

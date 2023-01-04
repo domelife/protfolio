@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* 레이아웃설정 */
+
+
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(img/bg_morning.jpg);
+    background-size: cover;
+}
+
+/* 로고설정 */
+#wrap h1 {
+    width: 90px;
+    height: 80px;
+    position: fixed;
+    left: 60px;
+    top: 30px;
+    background-image: url(img/logo_b.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+/* 텍스트박스 */
+article {
+    width: 450px;
+
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+article p {
+    font-size: 50px;
+    color: #666;
+}
+
+article strong {
+    color: #111;
+}
+
+article em {
+    font-size: 14px;
+    font-style: normal
+}
+
+/* 모바일이미지  */
+
+
+figure {
+    position: absolute;
+    width: 1226px;
+    height: 809px;
+
+    background-image: url(img/phone_morning.png);
+    right: -300px;
+    top: 200px;
+}
+
+figure p {
+    width: 548px;
+    height: 310px;
+    
+    position: absolute;
+    left: 133px;
+    top: 99px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-top:80px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* 하단메뉴설정 */
+
+nav {
+    position: fixed;
+    bottom: 70px;
+    width: 88%;
+    left: 6%;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+}
+
+nav li {
+    width: 25%;
+}
+
+nav li a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #111;
+    width: 98%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+}

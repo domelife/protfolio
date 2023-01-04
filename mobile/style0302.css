@@ -1,0 +1,236 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+/* font-family: 'Orbitron', sans-serif; */
+/* 전체설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+
+/* 배경화면설정 */
+#wrap {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(img/bg_morning.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.8s;
+
+
+}
+
+/* 로고설정 */
+h1 {position: fixed;
+left: 60px;
+top: 30px;
+width: 90px;
+height: 80px;
+background-size: contain;
+background-repeat: no-repeat;
+transition: all 0.5s;}
+
+/* 상단메뉴 */
+.gnb {
+    position: absolute;
+    right: 80px;
+    top: 50px;
+    display: flex;
+}
+
+.gnb li {}
+
+.gnb a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.5s;
+}
+
+.gnb li:hover a {
+    color: #fff;
+}
+
+
+/* text박스 */
+article {
+    position: absolute;
+    left: 3%;
+    top: 300px;
+   
+    font-family: 'Orbitron', sans-serif;
+    color: #ddd;
+}
+article p:nth-child(1) {font-size: 70px;
+                       }
+article p b{color: rgb(46, 46, 46);
+    margin-right: 10px;}
+article p:nth-child(2) {font-size: 20px;
+    color: #ddd;}
+
+/* 모바일이미지 */
+.mobile {
+    position: absolute;
+    right: -300px;
+    top: 200px;
+    background-image: url(img/phone_morning.png);
+    width: 1226px;
+    height: 809px;
+    background-repeat: no-repeat;
+    background-size: contain;
+transition: all 0.8s;
+
+}
+.mobile p {
+    
+    width: 544px;
+    height: 309px;
+    position: absolute;
+    left: 136px;
+    top:100px;
+    font-size: 70px;
+    text-align: center;
+    line-height: 4.2;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+
+}
+
+/* 하단메뉴 */
+nav {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+
+}
+
+nav ul {display: flex;
+justify-content:space-around ;
+}
+
+nav li {width: 20%}
+
+nav li a {display: block;
+            background-color: #fff;
+        text-align: center;
+    padding: 20px 0;
+opacity: 0.8;
+font-family: 'Orbitron', sans-serif;
+font-size: 16px;
+letter-spacing: 3px;
+transition: all 0.8s;}
+
+nav li:hover a {color: #fff;
+                background-color: #000;}
+
+
+
+      /*모닝설정  */
+      #wrap.morning {background-image: url(img/bg_morning.jpg);}
+      #wrap.morning h1 {background-image:url(img/logo_b.png);}
+      #wrap.morning article p b{color: 666;}
+      #wrap.morning article p:nth-child(2) {color: #ddd;}
+      #wrap.morning .mobile {background-image: url(img/phone_morning.png);}
+
+
+
+      /*애프터눈설정  */
+      #wrap.afternoon {background-image: url(img/bg_afternoon.jpg);}
+      #wrap.afternoon h1 {background-image:url(img/logo_b.png);}
+      #wrap.afternoon article p b{color: #111;}
+      #wrap.afternoon article p:nth-child(2) {color: #333;}
+      #wrap.afternoon .mobile {background-image: url(img/phone_afternoon.png);}
+
+      /*evening 설정  */
+      #wrap.evening {background-image: url(img/bg_evening.jpg);}
+      #wrap.evening h1 {background-image:url(img/logo_w.png);}
+      #wrap.evening article p b{color: #fff;}
+      #wrap.evening article p:nth-child(2) {color: #333;}
+      #wrap.evening .mobile {background-image: url(img/phone_evening.png);}
+
+
+      /*night 설정  */
+      #wrap.night {background-image: url(img/bg_night.jpg);}
+      #wrap.night h1 {background-image:url(img/logo_w.png);}
+      #wrap.night article p b{color: #fff;}
+      #wrap.night article p:nth-child(2) {color: #888;}
+      #wrap.night .mobile {background-image: url(img/phone_night.png);}
+      #wrap.night .cloud01 {opacity: 0.5;}
+      #wrap.night .cloud02 {opacity: 0.5;}
+      #wrap.night .mcloud01 {opacity: 0.5;}
+      #wrap.night .mcloud02 {opacity: 0.5;}
+
+
+
+
+      /* 구름설정 */
+
+      .cloud01 {position: absolute;
+    left: -1146px;
+animation: ani1 50s linear infinite;}
+      .cloud02 {position: absolute;
+    left: 0;
+animation: ani2 30s linear infinite;}
+
+      .mcloud01 {position: absolute;
+        width: 600px;
+        height: auto;
+    left: -600px;
+    animation: ani3 30s linear infinite;}
+      .mcloud02 {position: absolute;
+        width: 700px;
+        height: auto;
+    left: 0;
+    animation: ani4 30s linear infinite;}
+
+
+      @keyframes ani1 {
+          0% {left: -1146px;}
+          100%{left: 1950px;}
+      }
+
+      @keyframes ani2 {
+        0% {left: 0;}
+        50%{left: 1950px;}
+        50.001% {left: -1840px;}
+
+        100% {left: 0;}
+    }
+
+
+    @keyframes ani3 {
+        0% {left: -600px;}
+        100%{left: 600px;}
+    }
+    @keyframes ani4 {
+        0% {left:0px;}
+        50%{left: 700px;}
+        50.001% {left: -700px;}
+
+        100%{left: 0;}
+    }
+
+
