@@ -1,0 +1,239 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* 전체 설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #555;}
+img {border: none;
+    vertical-align: bottom;}
+
+body {font-family: 'Orbitron', sans-serif;}
+
+
+
+
+
+
+
+/* 배경 설정 */
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    background-image: url(img/bg_morning.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;}
+
+
+/* 로고 설정 */
+h1 {
+    background-image: url(img/logo_b.png);
+    width: 90px;
+    height: 80px; /*이 사진을 넣는 경우, height가 100%인 경우 없음. 무조건 지정 해줘야함*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 60px;
+    top: 60px;}
+
+
+
+
+/* gnb 설정 */
+.gnb {
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    display: flex; }
+
+.gnb li {}
+
+.gnb li a {
+    display: block;
+    padding: 20px;}
+
+
+
+
+/* 텍스트 설정 */
+.txt {
+    position: fixed;
+    top:50%;
+    width: 450px;
+    height: 200px;
+    margin-top: -100px;
+    left: 60px;}
+
+
+/* 픽스드 하는 경우와 px/% 하는 경우?*/
+
+
+
+.txt p {
+    font-size: 50px;}
+
+
+.txt em {
+    font-size: 14px;}
+
+
+
+
+
+/* 디지털 시계 설정 */
+section {
+    width: 1226px;
+    height: 809px;
+    background-image: url(img/phone_morning.png);
+    position: fixed;
+    right: -300px;
+    top: 200px;}
+
+section div {
+    width: 540px;
+    height: 304px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 80px;
+    position: absolute;
+    left: 138px;
+    top: 100px;
+    font-size: 60px;}
+
+section div span {}
+
+
+
+
+
+/* nav 설정 */
+nav {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav li {
+    width: 20%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    letter-spacing: 10px;
+    cursor: pointer;
+    transition: all 0.8s;}
+
+nav li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;}
+
+
+
+
+
+
+
+
+
+/* morning 테마 */
+#wrap.morning {
+    background-image: url(img/bg_morning.jpg);
+    background-size: cover;
+    transition: all 0.8s;}
+
+    #wrap.morning section {
+        background-image: url(img/phone_morning.png);
+        transition: all 0.8s;}
+
+    #wrap.morning p {
+        color: #999;}
+    
+    #wrap.morning strong {
+        color: #000;}
+
+
+
+/* afternoon 테마 */
+#wrap.afternoon {
+    background-image: url(img/bg_afternoon.jpg);
+    background-size: cover;
+    transition: all 0.8s;}
+
+    #wrap.afternoon section {
+        background-image: url(img/phone_afternoon.png);
+        transition: all 0.8s;}
+    
+    #wrap.afternoon p {
+        color: #999;}
+
+    #wrap.afternoon strong {
+        color: #000;}
+
+    
+
+
+
+/* evening테마 */
+#wrap.evening {
+    background-image: url(img/bg_evening.jpg);
+    background-size: cover;
+    transition: all 0.8s;}
+
+    #wrap.evening section {
+        background-image: url(img/phone_evening.png);
+        transition: all 0.8s;}
+
+    #wrap.evening h1 {
+            background-image: url(img/logo_w.png);}
+
+    #wrap.evening p {
+        color: #444;}
+
+    #wrap.evening strong {
+        color: #fff;}
+
+    #wrap.evening .gnb a {
+        color: #fff;}
+    
+    #wrap.evening .phone {
+        color: #fff;}
+
+
+
+/* night 테마 */
+#wrap.night {
+    background-image: url(img/bg_night.jpg);
+    background-size: cover;
+    transition: all 0.8s;}
+
+    #wrap.night section {
+        background-image: url(img/phone_night.png);
+        transition: all 0.8s;}
+
+    #wrap.night h1 {
+        background-image: url(img/logo_w.png);}
+
+    #wrap.night p {
+        color: #aaa;}
+
+    #wrap.night em {
+        color: #aaa;}
+
+    #wrap.night strong {
+        color: #fff;}
+
+    #wrap.night .gnb a {
+        color: #fff;}
+
+    #wrap.night .phone {
+        color: #fff;}
