@@ -104,7 +104,8 @@ section div {
     position: absolute;
     left: 138px;
     top: 100px;
-    font-size: 60px;}
+    font-size: 60px;
+    overflow: hidden;}
 
 section div span {}
 
@@ -137,6 +138,65 @@ nav li:hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;}
 
+
+/* 전체구름 설정 */
+.c1 {
+    position: absolute;
+    left: -1146px;
+    top: 0;
+    animation: ani1 110s linear infinite;}
+
+.c2 {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    animation: ani2 100s linear infinite;}
+
+
+@keyframes ani1 {
+
+    0% {left: -1146px;}
+    100% {left: 2000px}
+}
+
+@keyframes ani2 {
+
+    0% {left: 0;}
+    50% {left: 2000px;}
+    50.00001% {left: -1840px;} /* 갔다가 돌아오는 상자가 눈에 보여서 돌아오는 구간의 시간을 확 줄여버리면 됨.*/
+    100% {left: 0;}
+}
+
+
+
+/* 폰구름 설정 */
+.p1 {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    left: -600px;
+    animation: ani3 110s linear infinite;}
+
+.p2 {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    left: 0; 
+    animation: ani4 100s linear infinite;}
+
+@keyframes ani3 {
+
+    0% {left: -600px;}
+    100% {left: 1000px;}
+}
+
+@keyframes ani4 {
+
+    0% {left: 0;}
+    50% {left: 1000px;}
+    50.00001% {left: -500px;}
+    100% {left: 1000px;}
+}
 
 
 

@@ -60,12 +60,46 @@ img {border: none; vertical-align: bottom;}
 .container ul {
     display: flex;
     position: absolute;
-    width:2440px ;
-    left:0px;
+    width:960px ;
     top: 0;
     transition: all 0.8s;}
 
-    .container li {margin-right: 1.7px;}
+
+
+
+/* 하단 갤러리메뉴 돌아가게 하기 */
+.p1 {left: 0;
+    animation: ani1 20s linear infinite;}
+
+.p2 {left: 960px;
+    animation: ani2  20s linear infinite;}
+
+
+@keyframes ani1 {
+    0% {left: 0;}
+    50% {left: -960px;}
+    50.00001% {left: 960px;}
+    100% {left: 0;}
+}
+
+@keyframes ani2 {
+    0% {left: 960px;}
+    100% {left: -960px;}
+}
+
+.container:hover ul {
+    animation-play-state: paused;}
+
+
+.container li:hover  {
+    transform: scale(1.2);}
+
+
+    .container li {margin-right: 1.7px;} */
+
+
+
+
 
     /* 좌우버튼설정 */
     .left {margin-right: 2px;}
