@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_slide</title>
+
+    <!-- 외부스타일시트 연결 -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- 제이쿼리 연결 -->
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+
+    <!-- 자바스크립트 연결 -->
+    <!-- <script src="js/js.js"></script> -->
+
+
+    <style>
+        * {margin: 0; padding: 0;}
+        .wrap {position: relative;}
+        .slide {width: 100%;
+                height: 500px;
+                overflow: hidden;
+                position: relative;}
+        .slide ul {display: flex;
+                    list-style: none;
+                    width: auto;
+                    height: 500px;}
+        .slide ul li {width: 100%;
+                    height: 500px;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    background-size: cover;
+                    left: 100%;}
+        .slide li:nth-child(1) {background-image: url(../slide/img/0.png); left: 0;}
+        .slide li:nth-child(2) {background-image: url(../slide/img/1.png);}
+        .slide li:nth-child(3) {background-image: url(../slide/img/2.png);}
+
+        .btn {position: absolute;
+            left: 50%;
+            bottom: 50px;
+            z-index: 999;}
+        .btn ul {list-style: none;
+                display: flex;}
+        .btn ul li {background-image: url(../slide/img/btnVisual.png);
+                    background-position: 0 -16px;
+                    width: 14px;
+                    height: 15px;
+                    margin: 0 5px;}
+            
+            .btn ul li.on {background-position:0 0px;}
+
+    </style>
+</head>
+<!-- <body>
+        <div class="box1" class="on">
+            <ul>
+                <li><img src="../slide/img/0.png" alt=""></li>
+                <li><img src="../slide/img/1.png" alt=""></li>
+                <li><img src="../slide/img/2.png" alt=""></li>
+            </ul>
+            <div class="btn"></div>
+        </div>
+</body> -->
+
+<body>
+    <div class="wrap">
+        <div class="slide">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    
+        <div class="btn">
+            <ul>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            // btn을 클릭했을 때, slide li가 이동해라. -> 버튼과 슬라이드를 연결한 함수
+
+            $('.btn li').click(function(){
+
+
+            let i = $(this).index()
+            $('.slide li').eq(i-1).css({'left':0}).stop().animate({'left':'-100%'})
+            $('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':0})
+            
+            $('.btn li').removeClass('on')
+            $(this).addClass('on')
+
+            })
+
+
+
+            // 일정시간 간격으로 버튼을 순차적으로, 자동으로 클릭해져라.
+            // -> 마우스가 올려져있으면 슬라이드 불가. 떠나면 슬라이드 시작
+            let a =0
+
+            let slide = setInterval(timer,2000)
+
+            $('.wrap').mouseenter(function(){
+
+                clearInterval(slide)
+            })
+
+            $('.wrap').mouseleave(function(){
+
+                slide = setInterval(timer,2000)
+            })
+
+
+            // 버튼을 일일히 클릭하지 않고 컴퓨터가 자동으로 클릭하게 하여라.
+            function timer(){
+            a++;
+            if(a==3)a=0;
+
+            $('.btn li').eq(a).trigger('click')
+            }
+                //trigger함수: 버튼의 li중에서 eq(순번)가 a인 버튼을 규칙적이고 자동적으로 클릭해라.
+                // -> 그럼 슬라이드랑 버튼이 알아서 자동으로 넘어가는 것처럼 보임. 실상은 컴퓨터가 규칙적으로 버튼을 누르고 있는 것.
+
+            
+            
+        })
+    </script>
+</body>
+
+</html>
