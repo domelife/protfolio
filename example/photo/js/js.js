@@ -6,8 +6,8 @@ $(document).ready(function(){
     let a = $('article').size(); //size는 갯수를 세어주는 함수
     let aWd = $('article').width()
 
-    $('section').width(a*(aWd+20))
-    $('body').height(a*(aWd+20)) //괄호 안과 같이 같은 값으로 변환시켜라
+    $('section').width(a*(aWd+20)+600)
+    $('body').height(a*(aWd+20)+600) //괄호 안과 같이 같은 값으로 변환시켜라
 
         // -> 통일시키는 이유: 스크롤 할때 section의 가로값이랑 같이 움직여야 하기 때문
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
     let a = $('article').size();
     let aWd = $('article').width()
 
-    $('section').width(a*(aWd+20))
-    $('body').height(a*(aWd+20)) //괄호 안과 같이 같은 값으로 변환시켜라
+    $('section').width(a*(aWd+20)+600)
+    $('body').height(a*(aWd+20)+600) //괄호 안과 같이 같은 값으로 변환시켜라
 
     })
 
@@ -44,6 +44,26 @@ $(document).ready(function(){
         let i = $(this).index()
 
         $('html,body').scrollTop(1000*i)
+    })
+
+
+
+
+    // article을 클릭했을 때 내가 클릭한 
+    // 그 아이에게 addClass를 해라.
+    // 모든 article에게는 removeClass를 먼저 해라.
+    $('article h2').click(function(e){
+        e.preventDefault(); //기존에 있었던 a(html의 링크연결)의 이벤트값을 없애라.
+
+        $('article').removeClass('on')
+        $(this).parent().addClass('on')
+    })
+
+    //span을 클릭했을때(close임) article에 removeClass를 해라.
+    $('article span').click(function(){
+
+        $(this).parent().removeClass('on')
+        
     })
 
 

@@ -26,7 +26,7 @@ h1 {
     position: fixed;
     left: 60px;
     top: 50% /*임시설정 - section의 위치를 잡고 항상 section 위에 배치할 예정*/;
-    margin-top: -260px;
+    margin-top: -300px;
     display: flex;}
 
 .gnb li {margin-right: 30px;}
@@ -46,7 +46,8 @@ h1 {
 /* section 설정 */
 section {
     position: fixed;
-    width: 4000px;
+    width: 4600px;
+    height: 400px;
     top: 50%;
     margin-top: -200px;}
 
@@ -54,5 +55,104 @@ article {
     width: 180px;
     height: 400px;
     margin: 10px;
-    background-color:indianred;
-    float: left;}
+    background-color:#fff;
+    float: left;
+    position: relative;
+    box-shadow: 3px 3px 3px #bbb; /* 오아블(오른쪽 아래 블러 순서로 + 색상) */
+    overflow: hidden;
+    transition: all 0.7s;
+    top: 50%;
+    margin-top: -200px;}
+
+
+    /* article 상세설정 */
+    article h2 {
+        position: absolute;
+        top: 300px;
+        right: 0;
+        background-color: #111;
+        opacity: 0.4;
+        width: 100%; /* 사이즈가 커졌을때 article을 기준으로 따라가야 하기 때문에 아티클의 180px로 사용하지 않음*/
+        height: 50px;
+        cursor: pointer;
+        transition: all 0.5s;
+        z-index: 5;}
+
+    article h2 a {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        line-height: 3.5; /*line 하이트의 기본값은1.6임.*/
+        letter-spacing: 2px;
+        font-weight: bold;
+        padding-left: 20px;}
+
+    article strong {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        opacity: 0.4;
+        text-align: center;
+        transition: all 0.5s;}
+
+        article:hover strong{opacity: 1;}
+
+        article:hover h2 {opacity: 1;}
+
+    article strong img {}
+
+    article p {background-color: red;
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.8s;}
+
+    article p img {}
+
+    article em {
+        position: absolute;
+        bottom: 50px;
+        right: -300px; /* -180px은 변환할 예정. 지금 와이드 값만큼 오른쪽으로 보내 숨겨놓은 상태*/
+        display: inline-block;
+        transition: all 1s;
+        z-index: 3;}
+
+    article span {
+        position: absolute;
+        right: -300px; /* - 방향은 오른쪽으로 보내는것(right한정)*/
+        top: 110px;
+        font-size: 20px;
+        color: #fff;
+        z-index: 10;
+        cursor: pointer;}
+
+
+        /* article on값 설정 */
+        article.on {
+            width: 780px;
+            height: 500px;
+            margin-top: -250px;}
+
+        article.on strong {opacity: 0;}
+        article.on h2 {
+            top: 100px;
+            right: 0;
+            height: 100px;
+            background-color: #111;
+            opacity: 0.3;}
+
+        article.on h2 a {font-size: 30px;}
+        article.on p {
+            height: 500px;
+            margin-top: -250px;
+            opacity: 1;}
+        article.on em {right: 20px;}
+        article.on span {right: 20px;}
