@@ -21,7 +21,8 @@ $(document).ready(function(){
     let aWd = $('article').width()
 
     $('section').width(a*(aWd+20)+600)
-    $('body').height(a*(aWd+20)+600) //괄호 안과 같이 같은 값으로 변환시켜라
+    $('body').height(a*(aWd+20)) //괄호 안과 같이 같은 값으로 변환시켜라
+    4('html,body').scrollTop(a*(aWd+20))
 
     })
 
@@ -55,8 +56,24 @@ $(document).ready(function(){
     $('article h2').click(function(e){
         e.preventDefault(); //기존에 있었던 a(html의 링크연결)의 이벤트값을 없애라.
 
+
+        // 클릭한 나의 부모자의 순번을 찾아라.
+        let id = $(this).parent().index()
+        // 클릭한 나의 자손인 'a'의 속성값
+        let src = $(this).children('a').attr('href') //-> 속성명: attr()로 부름
+        $('article p img').attr({'src':''})
+
+        // 클릭한 나의 형제인 'p'의 자손인 'img'안에 속성명 src안에 대입해라.
+        $(this).siblings('p').children('img').attr({'src':src})
+
+
+
+
         $('article').removeClass('on')
         $(this).parent().addClass('on')
+
+
+        $('html,body').scrollTop(200*id)
     })
 
     //span을 클릭했을때(close임) article에 removeClass를 해라.
@@ -65,6 +82,10 @@ $(document).ready(function(){
         $(this).parent().removeClass('on')
         
     })
+
+
+
+
 
 
 
