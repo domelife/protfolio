@@ -1,0 +1,290 @@
+/* 언어 설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+
+
+/* 전체 설정 */
+*{margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #fff;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-family:'Noto Sans KR', sans-serif;;}
+
+
+/* 기본 설정 */
+.page {}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color:cornflowerblue ;}
+
+section {
+    width: 100%;
+    height: 1024px; /* 임시 설정*/}
+
+    section:nth-child(1) {background-color: #ccc;}
+    section:nth-child(2) {background-color: #111;}
+    section:nth-child(3) {background-color: #aaa;}
+    section:nth-child(4) {background-color: #999;}
+    section:nth-child(5) {background-color: #888;}
+    section:nth-child(6) {background-color: #777;}
+    section:nth-child(7) {background-color: #666;}
+
+footer {
+    width: 100%;
+    height: 800px;
+    background-color: #555;}
+
+
+
+
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+header {}
+
+.wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;}
+
+.wrap h1 {
+    width: 30%;
+    background-color: green;
+    }
+
+.wrap nav {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color:goldenrod;}
+
+nav .util {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+
+    color: #fff;
+    font-size: 15px;
+    background-color:darkgreen;}
+
+nav .util li {}
+
+nav .gnb {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    color: #fff;
+    font-size: 20px;
+    background-color:darkolivegreen}
+
+nav .gnb li {}
+
+
+
+
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main {}
+
+.main .btn {
+    
+}
+
+.main .txtBox {}
+
+.main .txtBox>div {}
+
+.main .imgBox {}
+
+.main .imgBox ul {}
+
+.main .imgBox li {}
+
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+.category {
+    position: relative;
+    background-image: url(../img/category\(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;}
+
+.category div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;}
+
+    .circle1 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: 27%;
+        top: 6%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 22px;}
+
+    .circle2 {
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        left: 47%;
+        top: 19%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 33px;}
+
+    .circle3 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: 30%;
+        top: 46%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 25px;}
+
+    .circle4 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 45%;
+        top: 64%;
+        border-radius:50% ;
+        background-color: #fff;
+        text-align: center;
+        font-size: 27px;}
+
+    .circle5 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        left: 17%;
+        top: 78%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 22px;}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{
+    font-weight:normal;
+    font-size:60px;
+    color: #fff;
+    text-shadow: 0 0 10px 2px #fff, ;
+    position: absolute;}
+
+    .txtMove p:nth-child(1) {
+        font-size:120px;
+        left: 65%;
+        top: 30px;
+        animation:ani1 5s 1s linear infinite}
+
+    .txtMove p:nth-child(2) {
+        font-size: 60px;
+        left: 80%;
+        top: 250px;
+        animation:ani2 7s 0.5s linear infinite} 
+
+    .txtMove p:nth-child(3) {
+        left: 60%;
+        top: 400px;
+        animation:ani3 5s linear infinite}
+
+    .txtMove p:nth-child(4) {
+        font-size: 70px;
+        left: 90%;
+        top: 500px;
+        animation:ani1 4s 1.5s linear infinite}
+
+    .txtMove p:nth-child(5) {
+        left: 75%;
+        top: 600px;
+        animation:ani1 5s 0.8s linear infinite}
+
+    .txtMove p:nth-child(6) {
+        left: 95%;
+        top: 700px;
+        animation:ani3 10s linear infinite}
+
+    .txtMove p:nth-child(7) {
+        font-size:40px;
+        left: 58%;
+        top: 800px;
+        animation:ani2 8s linear infinite}
+
+@keyframes ani1 {
+    0% {opacity: 0.7;
+        transform: translateY(0) /*, rotate(20deg)*/;} 
+    100% {opacity: 0;
+        transform: translateY(200px) /*rotate(80deg)*/;}}
+
+@keyframes ani2 {
+    0% {opacity: 0.7;
+        transform: translateY(0), rotate(20deg);} 
+    100% {opacity: 0;
+        transform: translateY(300px) rotate(80deg);}}
+
+@keyframes ani3 {
+    0% {opacity: 0.7;
+        transform: translateY(0), rotate(0deg);} 
+    100% {opacity: 0;
+        transform: translateY(100px) rotate(-30deg);}}
+
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+
+
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    height: 940px;
+    border-radius:50% ;
+    background-color: #fff;}
+
+.con .imgBox {
+    width: 300px;
+    height: 500px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #999;}
+
+.con .formBox {
+    width: 400px;
+    height: 500px;
+    margin-left: 10px;
+    background-color: #777;}
+
+
+
+
+/* --------- 5. 층별안내 설정 ------ */
