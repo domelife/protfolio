@@ -12,7 +12,8 @@ a {text-decoration: none;
     color: #fff;}
 img {border: none;
     vertical-align: bottom;}
-body {font-family:'Noto Sans KR', sans-serif;;}
+body {font-family:'Noto Sans KR', sans-serif;
+    background-color: #111;}
 
 
 /* 기본 설정 */
@@ -27,17 +28,13 @@ section {
     width: 100%;
     height: 1024px; /* 임시 설정*/}
 
-    section:nth-child(1) {background-color: #ccc;}
-    section:nth-child(2) {background-color: #111;}
-    section:nth-child(3) {background-color: #aaa;}
-    section:nth-child(4) {background-color: #999;}
-    section:nth-child(5) {background-color: #888;}
-    section:nth-child(6) {background-color: #777;}
-    section:nth-child(7) {background-color: #666;}
+section:nth-child(7) {
+    width: 100%;
+    height: 4000px;}
 
 footer {
     width: 100%;
-    height: 800px;
+    height: 500px;
     background-color: #555;}
 
 
@@ -93,11 +90,12 @@ nav .gnb li {}
 
 
 /* --------- 1. 메인섹션 설정 ------ */
-.main {}
+.main {
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;}
 
-.main .btn {
-    
-}
+.main .btn {}
 
 .main .txtBox {}
 
@@ -271,20 +269,164 @@ nav .gnb li {}
     border-radius:50% ;
     background-color: #fff;}
 
-.con .imgBox {
+.reservation .con .imgBox {
     width: 300px;
     height: 500px;
     margin-right: 10px;
-    border-radius: 20px;
-    background-color: #999;}
+    border-radius: 25px;
+    background-color: #999;
+    overflow: hidden;}
 
-.con .formBox {
+.reservation .con img {
+    width: 350px;
+    transform: translateX(-20px);}
+
+
+
+
+.reservation .con .formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 400px;
     height: 500px;
     margin-left: 10px;
-    background-color: #777;}
+    background-color: #777;
+    overflow: hidden;}
+
+.reservation .formBox h2 {
+    text-align: center;
+    margin-bottom: 20px;}
+
+.reservation .formBox>img {}
+
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;}
+
+.select .time {}
+
+.select .time h3 {}
+
+.select .time p {
+    border-bottom: solid 1px #111;}
+
+
+.select .people {}
+
+.select .people h3 {}
+
+.select .people p {
+    font-size: 12px;}
+
+.select .people form {}
+
+.select .people .btn {
+    display: flex;
+    flex-direction: column;}
 
 
 
 
 /* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.floor h2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    top: 10%;
+    border-radius:50% ;
+    background-color: #fff;
+    text-align: center;
+    line-height: 6.3;
+    text-decoration: solid 3px #d5b622;}
+
+.guideMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;}
+
+.guideMap .imgBox {
+    width: 70%;
+    height: 800px;
+    background-image: url(../img/floor2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;}
+
+.guideMap .txtBox {
+    width: 30%;
+    color: #fff;}
+
+.guideMap .txtBox ul {}
+
+.guideMap .txtBox ul li {}
+
+.guideMap .txtBox .location {}
+
+.guideMap .location p {}
+
+.guideMap .location span {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    top: 10%;
+    border-radius:50% ;
+    background-color: #d5b622;
+}
+
+.guideMap .bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/floor1.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {
+    background-image: url(../img/notice.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.notice .con {}
+
+.notice .con h2 {}
+
+.notice .con ul {}
+
+.notice .con li {}
+
+
+
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {
+    height: 3000px;
+    background-image: url(../img/road.png);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.road h2 {}
+
+.road .wrap {}
+
+.road .map {}
+
+.road .txt {}
