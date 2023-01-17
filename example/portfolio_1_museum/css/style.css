@@ -13,6 +13,7 @@ a {text-decoration: none;
 img {border: none;
     vertical-align: bottom;}
 body {font-family:'Noto Sans KR', sans-serif;
+    /* font-family: 'EB Garamond', serif; */
     background-color: #111;}
 
 
@@ -26,7 +27,8 @@ header {
 
 section {
     width: 100%;
-    height: 1024px; /* 임시 설정*/}
+    height: 1024px; /* 임시 설정*/
+    border-bottom: #fff 1px solid;}
 
 section:nth-child(7) {
     width: 100%;
@@ -132,7 +134,8 @@ nav .gnb li {}
         top: 6%;
         border-radius:50% ;
         background-color: #fff;
-        font-size: 22px;}
+        font-size: 22px;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle2 {
         position: absolute;
@@ -142,7 +145,8 @@ nav .gnb li {}
         top: 19%;
         border-radius:50% ;
         background-color: #fff;
-        font-size: 33px;}
+        font-size: 33px;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle3 {
         position: absolute;
@@ -152,7 +156,8 @@ nav .gnb li {}
         top: 46%;
         border-radius:50% ;
         background-color: #fff;
-        font-size: 25px;}
+        font-size: 25px;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle4 {
         position: absolute;
@@ -163,7 +168,8 @@ nav .gnb li {}
         border-radius:50% ;
         background-color: #fff;
         text-align: center;
-        font-size: 27px;}
+        font-size: 27px;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle5 {
         position: absolute;
@@ -173,7 +179,8 @@ nav .gnb li {}
         top: 78%;
         border-radius:50% ;
         background-color: #fff;
-        font-size: 22px;}
+        font-size: 22px;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
 
 .txtMove {
@@ -248,6 +255,60 @@ nav .gnb li {}
 
 
 /* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;
+}
+
+.info .half {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    right: -330px;
+    top: 50%;
+    margin-top: -230px;
+    border-radius:50% ;
+    background-color: #fff;
+    font-size: 22px;
+    box-shadow: 0 0 30px 5px #d5b622;
+    z-index: 10;}
+
+.info .imgBox {}
+
+.info .imgBox ul {}
+
+.info .imgBox li {}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: -2%;
+        z-index: 3;}
+
+    .flower {
+        position: absolute;
+        left: 13%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 65%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+
+
+
+
 
 
 /* --------- 4. 체험예약 설정 ------ */
@@ -267,7 +328,8 @@ nav .gnb li {}
     width: 940px;
     height: 940px;
     border-radius:50% ;
-    background-color: #fff;}
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
 
 .reservation .con .imgBox {
     width: 300px;
@@ -291,40 +353,99 @@ nav .gnb li {}
     width: 400px;
     height: 500px;
     margin-left: 10px;
-    background-color: #777;
     overflow: hidden;}
 
 .reservation .formBox h2 {
     text-align: center;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+    font-size: 28px;}
 
-.reservation .formBox>img {}
+.reservation .formBox .img {
+    text-align: center;}
 
 .select {
     display: flex;
     flex-direction: row;
     justify-content: space-around;}
 
-.select .time {}
+.select .time {
+    width: 40%;}
 
-.select .time h3 {}
+.select .time h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: solid 3px #111;}
 
 .select .time p {
-    border-bottom: solid 1px #111;}
+    font-size: 15px;
+    border-bottom: solid 1px #111;
+    padding: 5px 20px;}
 
 
-.select .people {}
+.select .people {
+    width: 40%;}
 
-.select .people h3 {}
+.select .people h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: solid 3px #111;}
 
 .select .people p {
-    font-size: 12px;}
+    font-size: 10px;
+    margin: 10px 0;}
 
-.select .people form {}
+.select .people .pm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;}
 
-.select .people .btn {
+    .pm .minus {    
+        color: #fff;
+        font-size: 13px; 
+        background-color: #999;
+        border-radius: 4px;
+        margin: 3px 5px;
+        padding: 0 15px;}
+
+    .pm .num {    
+        color: #000;
+        font-size: 15px; 
+        padding: 0 15px;}
+
+    .pm .plus {    
+        color: #fff;
+        font-size: 13px; 
+        background-color: #222;
+        border-radius: 4px;
+        padding: 0 15px;}
+
+.select .people .btn01 {
     display: flex;
     flex-direction: column;}
+
+.select .people .btn01 a{
+    display: block;
+    color: #fff;
+    font-size: 10px; 
+    font-weight: 300;
+    background-color: #222;
+    border-radius: 6px;
+    margin: 3px 0;
+    padding: 7px 20px;}
+
+
+.formBox .btn02 {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 15px; 
+    background-color: #940e10;
+    border-radius: 10px;
+    margin:  20px;
+    padding: 7px 0;}  
 
 
 
@@ -334,7 +455,8 @@ nav .gnb li {}
     position: relative;
     background-image: url(../img/floor4.png);
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: cover;
+    overflow: hidden;}
 
 .floor h2 {
     position: absolute;
@@ -344,9 +466,12 @@ nav .gnb li {}
     top: 10%;
     border-radius:50% ;
     background-color: #fff;
-    text-align: center;
-    line-height: 6.3;
-    text-decoration: solid 3px #d5b622;}
+    box-shadow: 0 0 30px 5px #d5b622;}
+
+    .floor>h2>p {
+        text-align: center;
+        line-height: 6.3;
+        /* ???text-decoration: solid 100px #d5b622???;*/ }
 
 .guideMap {
     display: flex;
@@ -356,42 +481,69 @@ nav .gnb li {}
     height: 100%;}
 
 .guideMap .imgBox {
-    width: 70%;
-    height: 800px;
-    background-image: url(../img/floor2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;}
+    position: absolute;
+    z-index: 999;
+    left: 18%;
+    top: 13%;}
+
+    .guideMap .imgBox .on {
+        display: none;}
+
+
 
 .guideMap .txtBox {
-    width: 30%;
-    color: #fff;}
+    position: absolute;
+    right: 13%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
 
-.guideMap .txtBox ul {}
+.guideMap .txtBox .flow {
+    margin-left: -10px;
+    margin-bottom: 40px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;}
 
-.guideMap .txtBox ul li {}
+.guideMap .txtBox .flow li {
+    font-weight:300;
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-bottom: #fff 1px solid ;}
 
-.guideMap .txtBox .location {}
+    .guideMap .txtBox .flow li:nth-child(1) {
+        color: #000;
+        text-shadow: 0 0px 7px #d5b622;}
 
-.guideMap .location p {}
 
-.guideMap .location span {
-    width: 50px;
-    height: 50px;
+
+.guideMap .txtBox .location {
+    margin-top: 40px;}
+
+.guideMap .location p {
+    font-weight:300;
+    font-size: 20px;
+    margin: 10px 0;}
+
+.guideMap .location p span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
     left: 90%;
     top: 10%;
-    border-radius:50% ;
-    background-color: #d5b622;
-}
+    margin-right: 15px;
+    border-radius: 10% ;
+    border: #d5b622 1px solid;}
+
+    .location p:nth-child(2) span {
+        background-color: #d5b622;
+        box-shadow: 0 0 7px 2px #d5b622;}
 
 .guideMap .bg {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    background-image: url(../img/floor1.png);
-    background-repeat: no-repeat;
-    background-size: cover
-}
+    right: 0;
+    top: 0;
+    z-index: 1;}
 
 
 
@@ -399,10 +551,20 @@ nav .gnb li {}
 
 /* --------- 6. 공지사항 설정 ------ */
 .notice {
+    position: relative;
     background-image: url(../img/notice.png);
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: cover;}
+
+.notice .moon {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: 10%;
+    top: 10%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
 
 .notice .con {}
 
