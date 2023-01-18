@@ -14,7 +14,8 @@ img {border: none;
     vertical-align: bottom;}
 body {font-family:'Noto Sans KR', sans-serif;
     /* font-family: 'EB Garamond', serif; */
-    background-color: #111;}
+    background-color: #111;
+    overflow-x: hidden;}
 
 
 /* 기본 설정 */
@@ -30,9 +31,9 @@ section {
     height: 1024px; /* 임시 설정*/
     border-bottom: #fff 1px solid;}
 
-section:nth-child(7) {
+.road {
     width: 100%;
-    height: 4000px;}
+}
 
 footer {
     width: 100%;
@@ -49,7 +50,7 @@ header {}
 .wrap {
     display: flex;
     width: 100%;
-    height: 100%;}
+    height: 100px}
 
 .wrap h1 {
     width: 30%;
@@ -85,7 +86,10 @@ nav .gnb {
     font-size: 20px;
     background-color:darkolivegreen}
 
-nav .gnb li {}
+nav .gnb li i {
+    font-size: 22px;
+    font-weight: 100;
+}
 
 
 
@@ -93,22 +97,87 @@ nav .gnb li {}
 
 /* --------- 1. 메인섹션 설정 ------ */
 .main {
+    position: relative;
     background-image: url(../img/main.png);
     background-repeat: no-repeat;
     background-size: cover;}
 
-.main .btn {}
+.main .btn {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 10%;
+    top: 7%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
 
-.main .txtBox {}
+    .main .btn p {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 6.3;}
+
+    .main .btn p i {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0 5px;}
+
+.main .txtBox {
+    position: absolute;
+    left: 27%;
+    top: 28%;
+    color: #fff;
+    z-index: 10;}
+
+    .main .txtBox .on p:nth-child(1) {
+        font-size: 45px;
+        font-family: 'EB Garamond', serif;
+        font-weight: 100 ;
+        color: #d5b622;}
+
+    .main .txtBox .on p:nth-child(2) {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 170px;
+        color: #fff;}
 
 .main .txtBox>div {}
 
 .main .imgBox {}
 
-.main .imgBox ul {}
+.main .imgBox ul {
+    display: flex;}
 
-.main .imgBox li {}
+    .main .imgBox li:nth-child(1) {
+        position: absolute;
+        left: 50%;
+        margin-left: -260px;
+        top: 15%;
+        z-index: 3;}
 
+    .main .imgBox li:nth-child(2) {
+        position: absolute;
+        left: 90%;
+        margin-left: -260px;
+        top: 12%;
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main>.imgBox>img {
+    position: absolute;
+    width: 500px;
+    left: 52%;
+    top: 50%;
+    z-index: 1;}
+
+
+.main .deco img {
+    position: absolute;
+    width: 55px;
+    left: 68.5%;
+    top: 45%;}
 
 
 
@@ -257,8 +326,7 @@ nav .gnb li {}
 /* --------- 3. 체헝안내 설정 ------ */
 .info {
     position: relative;
-    overflow: hidden;
-}
+    overflow: hidden;}
 
 .info .half {
     position: absolute;
@@ -275,9 +343,36 @@ nav .gnb li {}
 
 .info .imgBox {}
 
-.info .imgBox ul {}
+.info .imgBox ul {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+}
 
 .info .imgBox li {}
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 5px;}
+
+    .info .imgBox ul .txt {
+        font-size: 14px;
+        margin: 0 5px;
+    }
 
     .pan {
         position: absolute;
@@ -339,7 +434,7 @@ nav .gnb li {}
     background-color: #999;
     overflow: hidden;}
 
-.reservation .con img {
+.reservation .imgBox img {
     width: 350px;
     transform: translateX(-20px);}
 
@@ -353,7 +448,7 @@ nav .gnb li {}
     width: 400px;
     height: 500px;
     margin-left: 10px;
-    overflow: hidden;}
+    flex-wrap: nowrap;}
 
 .reservation .formBox h2 {
     text-align: center;
@@ -362,6 +457,7 @@ nav .gnb li {}
 
 .reservation .formBox .img {
     text-align: center;}
+
 
 .select {
     display: flex;
@@ -426,15 +522,19 @@ nav .gnb li {}
     display: flex;
     flex-direction: column;}
 
-.select .people .btn01 a{
-    display: block;
-    color: #fff;
-    font-size: 10px; 
-    font-weight: 300;
-    background-color: #222;
-    border-radius: 6px;
-    margin: 3px 0;
-    padding: 7px 20px;}
+    .select .people .btn01 a {
+        display: block;
+        color: #fff;
+        font-size: 10px; 
+        font-weight: 300;
+        background-color: #222;
+        border-radius: 6px;
+        margin: 3px 0;
+        padding: 7px 20px;}
+
+    .select .people .btn01 i {
+        margin-left: 40px;
+        font-size: 15px;}
 
 
 .formBox .btn02 {
@@ -463,15 +563,18 @@ nav .gnb li {}
     width: 150px;
     height: 150px;
     left: 10%;
-    top: 10%;
+    top: 7%;
     border-radius:50% ;
+    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 30px 5px #d5b622;}
 
     .floor>h2>p {
+        display: inline;
         text-align: center;
         line-height: 6.3;
-        /* ???text-decoration: solid 100px #d5b622???;*/ }
+        padding: 3px 7px;
+        border-bottom: #d5b622 4px solid; }
 
 .guideMap {
     display: flex;
@@ -483,11 +586,19 @@ nav .gnb li {}
 .guideMap .imgBox {
     position: absolute;
     z-index: 999;
-    left: 18%;
-    top: 13%;}
+    left: 25%;
+    top: 20%;}
 
-    .guideMap .imgBox .on {
-        display: none;}
+    .guideMap .imgBox .clippath {
+        width: 800px;
+        height: 650px;
+        background-color: #fff;
+        background-image: url(../img/floor_info-1.png);
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: -30px;
+        clip-path: polygon(54% 4%, 85% 15%, 97% 48%, 93% 69%, 95% 88%, 80% 98%, 35% 96%, 3% 81%, 0 38%, 18% 8%);
+        box-shadow: 10px 10px 20px 20px #050505;}
 
 
 
@@ -566,14 +677,63 @@ nav .gnb li {}
     background-color: #fff;
     box-shadow: 0 0 30px 5px #d5b622;}
 
+    .polygon01 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        margin-left: -420px;
+        top: 50%;
+        margin-top: -420px;
+        width: 840px;
+        height: 840px;
+        background-color: #f7f2ea;
+        z-index: 10;
+        background-image: url(../img/tree.png);
+        background-repeat: no-repeat;
+        background-size: 760px;
+        background-position: 20px center;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);}
+
+            .polygon01 .door01 {
+                width: 430px;
+                z-index: 20;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                transition: all 1s;}
+
+            .polygon01 .door02 {
+                width: 430px;
+                transform: rotateY(180deg);
+                z-index: 20;
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                transition: all 1s;}
+
+                .polygon01:hover .door01{left: -100%;}
+                .polygon01:hover .door02{right: -100%;}
+
+    .polygon02 {
+        position: absolute;
+        left: 50%;
+        margin-left: -450px;
+        top: 50%;
+        margin-top: -450px;
+        width: 900px;
+        height: 900px;
+        background-color: #6b5c4e;
+        z-index: 9;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);}
+                
+
 .notice .imgBox {
     display: flex;
     justify-content: center;
     align-items: center;}
-
-    .notice .imgBox .polygon {
-        width: 1000px;
-        z-index: 100;}  
         
     .notice .imgBox .pattern01 {
         position: absolute;
@@ -606,7 +766,10 @@ nav .gnb li {}
 
 .notice .con {
     position: absolute;
-    left: 40%;
+    width: 540px;
+    height: auto;
+    left: 50%;
+    margin-left: -270px;
     top: 28%;
     z-index: 1000;}
 
@@ -615,17 +778,25 @@ nav .gnb li {}
     font-size: 35px;
     font-weight: 1000;
     letter-spacing: -2px;
-    /* text-decoration: 5px solid #8c603a; */
     margin-bottom: 20px;}
 
-.notice .con ul {}
+.notice .con h2 p {
+    display: inline;
+    text-align: center;
+    padding: 5px 10px ;
+    border-bottom: #6b5c4e 5px solid;}
+
+.notice .con ul {
+    width: 100%;
+}
 
 .notice .con li {
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
     letter-spacing: -1px;
     padding: 20px 20px;
-    border-bottom: 2px solid #8c603a;
-}
+    border-bottom: 2px solid #6b5c4e;}
 
 
 
@@ -633,14 +804,83 @@ nav .gnb li {}
 
 /* --------- 7. 오시는길 설정 ------ */
 .road {
-    height: 3000px;
+    position: relative;
     background-image: url(../img/road.png);
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: contain;
+    background-position: center;}
 
-.road h2 {}
+    .road .mun {    
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        left: 15%;
+        top: 8%;
+        border-radius:50% ;
+        background-color: #fff;
+        box-shadow: 0 0 30px 5px #d5b622;}
 
-.road .wrap {}
+    .road .sun {    
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        right: 15%;
+        top: 8%;
+        border-radius:50% ;
+        background-color: #cc1b05;
+        box-shadow: 0 0 30px 5px #fff;}
+
+
+.road h2 {
+    position: absolute;  
+    left: 48%;
+    top: 50%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 1000;
+    letter-spacing: -2px;
+    margin-bottom: 20px;}
+
+.road h2 p {    
+    display: inline;
+    text-align: center;
+    padding: 5px 10px ;
+    border-bottom: #31550d 5px solid;}
+
+
+
+.road .mountain {
+    display: flex;}
+
+    .road .mountain .m1 {
+        position: absolute;
+        left: 1%;
+        top: 22%;}
+
+    .road .mountain .m2 {
+        position: absolute;
+        left: 20%;
+        top: 23%;}
+
+    .road .mountain .m3 {
+        position: absolute;
+        left: 35%;
+        top: 15%;}
+
+    .road .mountain .m4 {
+        position: absolute;
+        left: 58%;
+        top: 22%;}
+
+    .road .mountain .m5 {
+        position: absolute;
+        left: 72%;
+        top: 22%;}
+
+
+.road .wrap {
+    display: flex;
+}
 
 .road .map {}
 
