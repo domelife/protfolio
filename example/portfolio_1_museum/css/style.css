@@ -130,6 +130,17 @@ nav .gnb li i {
         font-weight: bold;
         padding: 0 5px;}
 
+.main .follow {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 10%;
+    top: 7%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;
+    display: none;}
+
 .main .txtBox {
     position: absolute;
     left: 27%;
