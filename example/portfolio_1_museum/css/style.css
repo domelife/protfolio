@@ -31,8 +31,7 @@ section {
     border-bottom: #fff 1px solid;}
 
 .road {
-    width: 100%;
-}
+    width: 100%;}
 
 footer {
     width: 100%;
@@ -46,10 +45,8 @@ footer {
 /* --------- 헤더 설정 ------ */
 header {}
 
-.wrap {
-    display: flex;
-    width: 100%;
-    height: 100px}
+header .wrap {
+    display: flex;}
 
 .wrap h1 {
     width: 30%;
@@ -65,18 +62,22 @@ header {}
 
 nav .util {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    width: 50%;
     height: 30%;
     color: #fff;
-    font-size: 15px;}
+    font-size: 15px;
+    margin-right: 30px;}
+
+    nav .util li:hover {cursor: pointer;}
 
 nav .util li {
     display: flex;
-align-items: center;}
+    align-items: center;
+    margin: 0 25px;}
 
     nav .util li i {}
+
     nav .util li .search {
         width: 90px;
         height: 13px;
@@ -91,12 +92,13 @@ nav .gnb {
     width: 100%;
     height: 70%;
     color: #fff;
-    font-size: 20px;}
+    font-size: 22px;}
 
 nav .gnb li i {
     font-size: 22px;
-    font-weight: 100;
-}
+    font-weight: 100;}
+
+    nav .gnb li:hover {cursor: pointer;}
 
 
 
@@ -126,9 +128,11 @@ nav .gnb li i {
         line-height: 6.3;}
 
     .main .trip p i {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: bold;
         padding: 0 5px;}
+    
+        .main .trip p i:hover {cursor: pointer;}
 
 .main .follow {
     position: absolute;
@@ -399,13 +403,40 @@ nav .gnb li i {
 
 .info .imgBox {}
 
-.info .imgBox ul {
-    position: absolute;
-    left: 50%;
-    margin-left: -150px;
-}
+.info .imgBox ul {}
+
 
 .info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7) ;
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
 
 .info .imgBox li>div {
     display: flex;
@@ -422,19 +453,28 @@ nav .gnb li i {
         }
 
     .info .imgBox ul .title {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
-        margin: 10px 5px;}
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
 
     .info .imgBox ul .txt {
-        font-size: 14px;
-        margin: 0 5px;
-    }
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
 
     .pan {
         position: absolute;
         right: 0;
-        top: -2%;
+        top: 50%;
+        margin-top: -507px;
         z-index: 3;}
 
     .flower {
@@ -461,9 +501,11 @@ nav .gnb li i {
     .line {
         position: absolute;
         width: 300px;
-        left: 45%;
-        top: 20%;
-        margin-top: -200px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
         z-index: 1;
     }
 
@@ -961,11 +1003,11 @@ nav .gnb li i {
 
 .road .map {
     position: absolute;
-    left: 6%;
-    top: 60%;}
+    left: 2%;
+    top: 58%;}
 
     .road .map img {
-        width: 800px;}
+        width: 960px;}
 
 .road .txt {
     position: absolute;
@@ -1002,3 +1044,1853 @@ footer>p {
     padding: 40px 30px;
     color: #fff;
     line-height: 2;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*############################### 미디어 쿼리 구간 설정 ###################################*/
+/* 1699px 이상 구간 */
+@media (min-width:1699px) {
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+header {}
+
+header .wrap {
+    display: flex;}
+
+.wrap h1 {
+    width: 30%;
+    padding-right: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 3.2;}
+
+.wrap nav {
+    display: flex;
+    flex-direction: column;
+    width: 70%;}
+
+nav .util {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30%;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 30px;}
+
+    nav .util li:hover {cursor: pointer;}
+
+nav .util li {
+    display: flex;
+    align-items: center;
+    margin: 0 25px;}
+
+    nav .util li i {}
+
+    nav .util li .search {
+        width: 90px;
+        height: 13px;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: #fff;}
+
+nav .gnb {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    color: #fff;
+    font-size: 22px;}
+
+nav .gnb li i {
+    font-size: 22px;
+    font-weight: 100;}
+
+    nav .gnb li:hover {cursor: pointer;}
+
+
+
+
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main {
+    position: relative;
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.main .trip {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 10%;
+    top: 7%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
+
+    .main .trip p {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 6.3;}
+
+    .main .trip p i {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 0 5px;}
+    
+        .main .trip p i:hover {cursor: pointer;}
+
+.main .follow {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 10%;
+    top: 7%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;
+    display: none;}
+
+.main .txtBox {
+    position: absolute;
+    left: 27%;
+    top: 30%;
+    color: #fff;
+    z-index: 10;}
+
+    .main .txtBox .on>div p:nth-child(1) {
+        position: absolute;
+        left: -15%;
+        top: -15%;
+        font-size: 45px;
+        font-family: 'EB Garamond', serif;
+        font-weight: 100 ;
+        color: #d5b622;}
+
+    .main .txtBox .on>div p:nth-child(2) {
+        position: absolute;
+        left: 15%;
+        top: 0%;
+        font-size: 45px;
+        font-family: 'EB Garamond', serif;
+        font-weight: 100 ;
+        color: #d5b622;}
+
+    .main .txtBox .on>div p:nth-child(3) {
+        position: absolute;
+        left: -5%;
+        top: 15%;
+        font-size: 45px;
+        font-family: 'EB Garamond', serif;
+        font-weight: 100 ;
+        color: #d5b622;}
+
+    .main .txtBox .on .txt {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 300px;
+        color: #fff;}
+
+.main .txtBox>div {}
+
+.main .imgBox {}
+
+.main .imgBox ul {
+    display: flex;}
+
+    .main .imgBox li:nth-child(1) {
+        position: absolute;
+        left: 50%;
+        margin-left: -260px;
+        top: 15%;
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(2) {
+        position: absolute;
+        left: 90%;
+        margin-left: -260px;
+        top: 12%;
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main>.imgBox>img {
+    position: absolute;
+    width: 500px;
+    left: 52%;
+    top: 50%;
+    z-index: 1;}
+
+
+.main .deco img {
+    position: absolute;
+    width: 55px;
+    left: 68.5%;
+    top: 45%;}
+
+
+.main .go {
+    position: absolute;
+    left: 56%;
+    top: 72%;
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    line-height: 2.2;
+    z-index: 999;
+}
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+.category {
+    position: relative;
+    background-image: url(../img/category\(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;}
+
+.category div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;}
+
+    .circle1 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: 27%;
+        top: 6%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 22px;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+    .circle2 {
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        left: 47%;
+        top: 19%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 33px;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+    .circle3 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: 30%;
+        top: 46%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 25px;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+    .circle4 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 45%;
+        top: 64%;
+        border-radius:50% ;
+        background-color: #fff;
+        text-align: center;
+        font-size: 27px;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+    .circle5 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        left: 17%;
+        top: 78%;
+        border-radius:50% ;
+        background-color: #fff;
+        font-size: 22px;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{
+    font-weight:normal;
+    font-size:60px;
+    color: #fff;
+    text-shadow: 0 0 10px 2px #fff, ;
+    position: absolute;}
+
+    .txtMove p:nth-child(1) {
+        font-size:120px;
+        left: 65%;
+        top: 30px;
+        animation:ani1 5s 1s linear infinite}
+
+    .txtMove p:nth-child(2) {
+        font-size: 60px;
+        left: 80%;
+        top: 250px;
+        animation:ani2 7s 0.5s linear infinite} 
+
+    .txtMove p:nth-child(3) {
+        left: 60%;
+        top: 400px;
+        animation:ani3 5s linear infinite}
+
+    .txtMove p:nth-child(4) {
+        font-size: 70px;
+        left: 90%;
+        top: 500px;
+        animation:ani1 4s 1.5s linear infinite}
+
+    .txtMove p:nth-child(5) {
+        left: 75%;
+        top: 600px;
+        animation:ani1 5s 0.8s linear infinite}
+
+    .txtMove p:nth-child(6) {
+        left: 95%;
+        top: 700px;
+        animation:ani3 10s linear infinite}
+
+    .txtMove p:nth-child(7) {
+        font-size:40px;
+        left: 58%;
+        top: 800px;
+        animation:ani2 8s linear infinite}
+
+@keyframes ani1 {
+    0% {opacity: 0.7;
+        transform: translateY(0) /*, rotate(20deg)*/;} 
+    100% {opacity: 0;
+        transform: translateY(200px) /*rotate(80deg)*/;}}
+
+@keyframes ani2 {
+    0% {opacity: 0.7;
+        transform: translateY(0), rotate(20deg);} 
+    100% {opacity: 0;
+        transform: translateY(300px) rotate(80deg);}}
+
+@keyframes ani3 {
+    0% {opacity: 0.7;
+        transform: translateY(0), rotate(0deg);} 
+    100% {opacity: 0;
+        transform: translateY(100px) rotate(-30deg);}}
+
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;}
+
+.info .half {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    right: -330px;
+    top: 50%;
+    margin-top: -230px;
+    border-radius:50% ;
+    background-color: #fff;
+    font-size: 22px;
+    box-shadow: 0 0 30px 5px #d5b622;
+    z-index: 10;}
+
+.info .imgBox {}
+
+.info .imgBox ul {}
+
+
+.info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        z-index: 40;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
+
+    .info .imgBox ul .txt {
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -507px;
+        z-index: 3;}
+
+    .flower {
+        position: absolute;
+        left: 13%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 65%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+        
+    .line {
+        position: absolute;
+        width: 300px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    left: 65%;
+    top: 50%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 30px;}
+
+    .btn .top {}
+    .btn .bottom {}
+
+
+
+
+
+
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    height: 940px;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
+
+.reservation .con .imgBox {
+    width: 300px;
+    height: 500px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #999;
+    overflow: hidden;}
+
+.reservation .imgBox img {
+    width: 350px;
+    transform: translateX(-20px);}
+
+
+
+
+.reservation .con .formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    margin-left: 10px;
+    flex-wrap: nowrap;}
+
+.reservation .formBox h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;}
+
+.reservation .formBox .img {
+    text-align: center;}
+
+
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;}
+
+.select .time {
+    width: 40%;}
+
+.select .time h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: solid 3px #111;}
+
+.select .time p {
+    font-size: 15px;
+    border-bottom: solid 1px #111;
+    padding: 5px 20px;}
+
+
+.select .people {
+    width: 40%;}
+
+.select .people h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: solid 3px #111;}
+
+.select .people p {
+    font-size: 10px;
+    margin: 10px 0;}
+
+.select .people .pm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    .pm .minus {    
+        color: #fff;
+        font-size: 13px; 
+        background-color: #999;
+        border-radius: 4px;
+        margin: 3px 5px;
+        padding: 0 15px;}
+
+    .pm .num {    
+        color: #000;
+        font-size: 15px; 
+        padding: 0 15px;}
+
+    .pm .plus {    
+        color: #fff;
+        font-size: 13px; 
+        background-color: #222;
+        border-radius: 4px;
+        padding: 0 15px;}
+
+.select .people .btn01 {
+    display: flex;
+    flex-direction: column;}
+
+    .select .people .btn01 a {
+        display: block;
+        color: #fff;
+        font-size: 10px; 
+        font-weight: 300;
+        background-color: #222;
+        border-radius: 6px;
+        margin: 3px 0;
+        padding: 7px 20px;}
+
+    .select .people .btn01 i {
+        margin-left: 40px;
+        font-size: 15px;}
+
+
+.formBox .btn02 {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 15px; 
+    background-color: #940e10;
+    border-radius: 10px;
+    margin:  20px;
+    padding: 7px 0;}  
+
+
+
+
+/* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;}
+
+.floor h2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    top: 7%;
+    border-radius:50% ;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
+
+    .floor>h2>p {
+        display: inline;
+        text-align: center;
+        line-height: 6.3;
+        padding: 3px 7px;
+        border-bottom: #d5b622 4px solid; }
+
+.guideMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;}
+
+.guideMap .imgBox {
+    position: absolute;
+    z-index: 999;
+    left: 25%;
+    top: 20%;}
+
+    .guideMap .imgBox .clippath {
+        width: 800px;
+        height: 650px;
+        background-color: #fff;
+        background-image: url(../img/floor_info-1.png);
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: center;
+        clip-path: polygon(54% 4%, 85% 15%, 97% 48%, 93% 69%, 95% 88%, 80% 98%, 35% 96%, 3% 81%, 0 38%, 18% 8%);
+        box-shadow: 10px 10px 20px 20px #050505;}
+
+
+
+.guideMap .txtBox {
+    position: absolute;
+    right: 13%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
+
+.guideMap .txtBox .flow {
+    margin-left: -10px;
+    margin-bottom: 40px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;}
+
+.guideMap .txtBox .flow li {
+    font-weight:300;
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-bottom: #fff 1px solid ;}
+
+    .guideMap .txtBox .flow li:nth-child(1) {
+        color: #000;
+        text-shadow: 0 0px 7px #d5b622;}
+
+
+
+.guideMap .txtBox .location {
+    margin-top: 40px;}
+
+.guideMap .location p {
+    font-weight:300;
+    font-size: 20px;
+    margin: 10px 0;}
+
+.guideMap .location p span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    left: 90%;
+    top: 10%;
+    margin-right: 15px;
+    border-radius: 10% ;
+    border: #d5b622 1px solid;}
+
+    .location p:nth-child(2) span {
+        background-color: #d5b622;
+        box-shadow: 0 0 7px 2px #d5b622;}
+
+.guideMap .bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {
+    position: relative;
+    background-image: url(../img/notice.png);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.notice .moon {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: 10%;
+    top: 8%;
+    border-radius:50% ;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px #d5b622;}
+
+    .polygon01 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        margin-left: -420px;
+        top: 50%;
+        margin-top: -420px;
+        width: 840px;
+        height: 840px;
+        background-color: #f7f2ea;
+        z-index: 10;
+        background-image: url(../img/tree.png);
+        background-repeat: no-repeat;
+        background-size: 760px;
+        background-position: 20px center;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);}
+
+            .polygon01 .door01 {
+                width: 430px;
+                z-index: 20;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                transition: all 1s;}
+
+            .polygon01 .door02 {
+                width: 430px;
+                transform: rotateY(180deg);
+                z-index: 20;
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                transition: all 1s;}
+
+                .polygon01:hover .door01{left: -100%;}
+                .polygon01:hover .door02{right: -100%;}
+
+    .polygon02 {
+        position: absolute;
+        left: 50%;
+        margin-left: -450px;
+        top: 50%;
+        margin-top: -450px;
+        width: 900px;
+        height: 900px;
+        background-color: #6b5c4e;
+        z-index: 9;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);}
+                
+
+.notice .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+        
+    .notice .imgBox .pattern01 {
+        position: absolute;
+        width: 500px;
+        left: 15%;
+        top: 1%;
+        opacity: 0.5;
+        z-index: 2;}
+        
+    .notice .imgBox .pattern02 {
+        position: absolute;
+        right: 23%;
+        top: 65%;
+        opacity: 0.5;
+        z-index: 2;} 
+
+    .notice .imgBox .bird01{
+        position: absolute;
+        left: 6%;
+        top: 75%;
+        opacity: 0.8;
+        z-index: 2;}
+
+    .notice .imgBox .bird02{
+        position: absolute;
+        left: 19%;
+        top: 62%;
+        opacity: 0.8;
+        z-index: 2;}
+
+.notice .con {
+    position: absolute;
+    width: 540px;
+    height: auto;
+    left: 50%;
+    margin-left: -270px;
+    top: 28%;
+    z-index: 1000;}
+
+.notice .con h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 1000;
+    letter-spacing: -2px;
+    margin-bottom: 20px;}
+
+.notice .con h2 p {
+    display: inline;
+    text-align: center;
+    padding: 5px 10px ;
+    border-bottom: #6b5c4e 5px solid;}
+
+.notice .con ul {
+    width: 100%;
+}
+
+.notice .con li {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    letter-spacing: -1px;
+    padding: 20px 20px;
+    border-bottom: 2px solid #6b5c4e;}
+
+
+
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {
+    position: relative;
+    background-image: url(../img/road.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;}
+
+    .road .mun {    
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        left: 15%;
+        top: 8%;
+        border-radius:50% ;
+        background-color: #fff;
+        box-shadow: 0 0 30px 5px #d5b622;}
+
+    .road .sun {    
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        right: 15%;
+        top: 8%;
+        border-radius:50% ;
+        background-color: #cc1b05;
+        box-shadow: 0 0 30px 5px #fff;}
+
+
+.road h2 {
+    position: absolute;  
+    left: 48%;
+    top: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+    letter-spacing: -2px;
+    margin-bottom: 20px;}
+
+.road h2 p {    
+    display: inline;
+    text-align: center;
+    padding: 5px 10px ;
+    border-bottom: #31550d 5px solid;}
+
+
+
+.road .mountain {
+    display: flex;}
+
+    .road .mountain .m1 {
+        position: absolute;
+        left: 1%;
+        top: 22%;}
+
+    .road .mountain .m2 {
+        position: absolute;
+        left: 20%;
+        top: 23%;}
+
+    .road .mountain .m3 {
+        position: absolute;
+        left: 35%;
+        top: 15%;}
+
+    .road .mountain .m4 {
+        position: absolute;
+        left: 58%;
+        top: 22%;}
+
+    .road .mountain .m5 {
+        position: absolute;
+        left: 72%;
+        top: 22%;}
+
+
+.road .wrap {
+    display: flex;
+}
+
+.road .map {
+    position: absolute;
+    left: 2%;
+    top: 58%;}
+
+    .road .map img {
+        width: 960px;}
+
+.road .txt {
+    position: absolute;
+    right: 20%;
+    top: 60%;}
+
+.road .txt ul {list-style:square;}
+.road .txt li {margin-bottom: 60px;}
+
+.road .txt h4{
+    font-size: 27px;
+    margin-bottom: 10px;}
+
+.road .txt p {
+    font-size: 20px;
+}
+
+
+
+/* --------- 7. 마지막!!!!!!!! 푸터 설정 ------ */
+footer {}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    padding: 25px 0 ;
+    border-bottom: #fff solid 1px;}
+
+footer>p {
+    padding: 40px 30px;
+    color: #fff;
+    line-height: 2;}
+
+
+
+}
+
+
+
+
+/* 1500px 이상 1698px 이하구간 */
+@media (min-width:1500px) and (max-width:1698px) {
+
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+.wrap h1 {
+    transform:scale(0.8);}
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main .trip {
+    transform:scale(0.8);}
+
+.main .follow {
+    transform:scale(0.8);}
+
+.main .txtBox {
+    transform:scale(0.9);
+    top: 25%}
+
+    .main .txtBox .on .txt {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 350px;
+        color: #fff;}
+
+    .main .imgBox li:nth-child(1) {
+        top: 10%;
+        transform:scale(0.9);}
+
+    .main .imgBox li:nth-child(2) {
+        margin-left: -230px;
+        top: 8%;
+        transform:scale(0.9);
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main .deco img {
+    transform: scale(0.9);}
+
+.main .go {
+    transform: scale(0.8);}
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+    .circle1 {
+        left: 30%;
+        top: 6%;
+        transform: scale(0.9);}
+
+    .circle2 {
+        left: 47%;
+        top: 19%;
+        transform: scale(0.9);}
+
+    .circle3 {
+        left: 30%;
+        top: 46%;
+        transform: scale(0.9);}
+
+    .circle4 {
+        left: 50%;
+        top: 64%;
+        transform: scale(0.9);}
+
+    .circle5 {
+        left: 17%;
+        top: 78%;
+        transform: scale(0.9);}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{transform: scale(0.8);}
+
+    .txtMove p:nth-child(1) {
+        left: 70%;
+        top: 25px;}
+
+    .txtMove p:nth-child(2) {
+        left: 85%;
+        top: 230px;} 
+
+    .txtMove p:nth-child(3) {
+        left: 65%;
+        top: 350px;}
+
+    .txtMove p:nth-child(4) {
+        left: 95%;
+        top: 400px;}
+
+    .txtMove p:nth-child(5) {
+        left: 80%;
+        top: 500px;}
+
+    .txtMove p:nth-child(6) {
+        left: 90%;
+        top: 600px;}
+
+    .txtMove p:nth-child(7) {
+        left: 65%;
+        top: 680px;}
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;}
+
+.info .half {
+    transform: scale(0.9);}
+
+.info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        z-index: 40;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
+
+    .info .imgBox ul .txt {
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -507px;
+        z-index: 3;
+        transform: scale(0.9);}
+
+    .flower {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 60%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+        
+    .line {
+        position: absolute;
+        width: 300px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    left: 63%;
+    top: 50%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 30px;}
+
+    .btn .top {}
+    .btn .bottom {}
+
+
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    transform: scale(0.9);}
+
+
+/* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;}
+
+.floor h2 {
+    left: 12%;
+    top: 10%;}
+
+.guideMap {
+    transform: scale(0.9);}
+
+.guideMap .imgBox {
+    position: absolute;
+    z-index: 999;
+    left: 20%;
+    top: 20%;}
+
+
+.guideMap .txtBox {
+    position: absolute;
+    right: 10%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
+
+
+.guideMap .bg {
+    right: -10%;}
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {}
+
+    .polygon01 {
+        transform: scale(0.9);}
+
+    .polygon02 {
+        transform: scale(0.9);}
+
+.notice .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+        
+    .notice .imgBox .pattern01 {
+        left: 10%;
+        top: 1%;
+        transform: scale(0.9);}
+        
+    .notice .imgBox .pattern02 {
+        right: 18%;
+        transform: scale(0.9);} 
+
+    .notice .imgBox .bird01{
+        transform: scale(0.9);}
+
+    .notice .imgBox .bird02{
+        transform: scale(0.9);}
+
+.notice .con {
+    transform: scale(0.9);}
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {}
+
+    .road .mun {    
+        left: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .sun {    
+        right: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .mountain .m1 {
+        left: -2%;
+        top: 24%;
+        transform: scale(0.8);}
+
+    .road .mountain .m2 {
+        left: 18%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m3 {
+        left: 31%;
+        top: 19%;
+        transform: scale(0.8);}
+
+    .road .mountain .m4 {
+        left: 56%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m5 {
+        left: 68%;
+        top: 23%;
+        transform: scale(0.8);}
+
+
+.road .wrap {
+    display: flex;
+}
+
+.road .map {
+    position: absolute;
+    left: -5%;
+    top: 54%;
+    transform: scale(0.8);}
+
+.road .txt {
+    position: absolute;
+    right: 13%;
+    top: 56%;
+    transform: scale(0.9);}
+
+.road .txt ul {list-style:square;}
+.road .txt li {margin-bottom: 60px;}
+
+.road .txt h4{
+    font-size: 27px;
+    margin-bottom: 10px;}
+
+.road .txt p {
+    font-size: 20px;}
+
+/* --------- 7. 마지막!!!!!!!! 푸터 설정 ------ */
+footer {}
+
+footer div {
+    font-size: 20px;}
+
+footer>p {
+    font-size: 15px;}
+
+}
+
+
+
+
+
+/* 1280px 이상 1599px 이하 구간 */
+@media(min-width:1280px) and (max-width:1599px) {
+
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+.wrap h1 {
+    transform:scale(0.8);}
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main .trip {
+    transform:scale(0.8);}
+
+.main .follow {
+    transform:scale(0.8);}
+
+.main .txtBox {
+    transform:scale(0.8);
+    top: 25%}
+
+    .main .txtBox .on .txt {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 350px;
+        color: #fff;}
+
+    .main .imgBox li:nth-child(1) {
+        top: 10%;
+        transform:scale(0.7);}
+
+    .main .imgBox li:nth-child(2) {
+        margin-left: -230px;
+        top: 8%;
+        transform:scale(0.8);
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main .deco img {
+    transform: scale(0.9);}
+
+.main .go {
+    transform: scale(0.8);}
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+    .circle1 {
+        left: 30%;
+        top: 6%;
+        transform: scale(0.9);}
+
+    .circle2 {
+        left: 47%;
+        top: 19%;
+        transform: scale(0.9);}
+
+    .circle3 {
+        left: 30%;
+        top: 46%;
+        transform: scale(0.9);}
+
+    .circle4 {
+        left: 50%;
+        top: 64%;
+        transform: scale(0.9);}
+
+    .circle5 {
+        left: 17%;
+        top: 78%;
+        transform: scale(0.9);}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{transform: scale(0.8);}
+
+    .txtMove p:nth-child(1) {
+        left: 70%;
+        top: 25px;}
+
+    .txtMove p:nth-child(2) {
+        left: 85%;
+        top: 230px;} 
+
+    .txtMove p:nth-child(3) {
+        left: 65%;
+        top: 350px;}
+
+    .txtMove p:nth-child(4) {
+        left: 95%;
+        top: 400px;}
+
+    .txtMove p:nth-child(5) {
+        left: 80%;
+        top: 500px;}
+
+    .txtMove p:nth-child(6) {
+        left: 90%;
+        top: 600px;}
+
+    .txtMove p:nth-child(7) {
+        left: 65%;
+        top: 680px;}
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;}
+
+.info .half {
+    transform: scale(0.9);}
+
+.info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        z-index: 40;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
+
+    .info .imgBox ul .txt {
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -507px;
+        z-index: 3;
+        transform: scale(0.9);}
+
+    .flower {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 60%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+        
+    .line {
+        position: absolute;
+        width: 300px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    left: 63%;
+    top: 50%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 30px;}
+
+    .btn .top {}
+    .btn .bottom {}
+
+
+
+
+
+
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    transform: scale(0.9);}
+
+
+/* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;}
+
+.floor h2 {
+    left: 12%;
+    top: 10%;}
+
+.guideMap {
+    transform: scale(0.9);}
+
+.guideMap .imgBox {
+    position: absolute;
+    z-index: 999;
+    left: 20%;
+    top: 20%;}
+
+
+.guideMap .txtBox {
+    position: absolute;
+    right: 10%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
+
+
+.guideMap .bg {
+    right: -10%;}
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {}
+
+    .polygon01 {
+        transform: scale(0.9);}
+
+    .polygon02 {
+        transform: scale(0.9);}
+
+.notice .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+        
+    .notice .imgBox .pattern01 {
+        left: 10%;
+        top: 1%;
+        transform: scale(0.9);}
+        
+    .notice .imgBox .pattern02 {
+        right: 18%;
+        transform: scale(0.9);} 
+
+    .notice .imgBox .bird01{
+        transform: scale(0.9);}
+
+    .notice .imgBox .bird02{
+        transform: scale(0.9);}
+
+.notice .con {
+    transform: scale(0.9);}
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {}
+
+    .road .mun {    
+        left: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .sun {    
+        right: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .mountain .m1 {
+        left: -2%;
+        top: 24%;
+        transform: scale(0.8);}
+
+    .road .mountain .m2 {
+        left: 18%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m3 {
+        left: 31%;
+        top: 19%;
+        transform: scale(0.8);}
+
+    .road .mountain .m4 {
+        left: 56%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m5 {
+        left: 68%;
+        top: 23%;
+        transform: scale(0.8);}
+
+
+.road .wrap {
+    display: flex;
+}
+
+.road .map {
+    position: absolute;
+    left: -5%;
+    top: 54%;
+    transform: scale(0.8);}
+
+.road .txt {
+    position: absolute;
+    right: 13%;
+    top: 56%;
+    transform: scale(0.9);}
+
+.road .txt ul {list-style:square;}
+.road .txt li {margin-bottom: 60px;}
+
+.road .txt h4{
+    font-size: 27px;
+    margin-bottom: 10px;}
+
+.road .txt p {
+    font-size: 20px;}
+
+/* --------- 7. 마지막!!!!!!!! 푸터 설정 ------ */
+footer {}
+
+footer div {
+    font-size: 20px;}
+
+footer>p {
+    font-size: 15px;}
+
+}
+
+
+}
+
+
+
+/* 1024px 이상 1279px 이하 구간 */
+@media(min-width:1024px) and (max-width:1279px) {}
+
+
+/* 780px 이상 1023px 이하 구간 */
+@media(min-width:780px) and (max-width:1023px) {}
+
+
+/* 640px 이상 779px 이하 구간 */
+@media(min-width:640px) and (max-width:780px) {}
+
+
+/* 480px 이상 639px 이하 구간 */
+@media(min-width:480px) and (max-width:639px) {}
+
+
+/* 479px 이하 구간 */
+@media(max-width:479px) {}
