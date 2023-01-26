@@ -998,8 +998,7 @@ nav .gnb li i {
 
 
 .road .wrap {
-    display: flex;
-}
+    display: flex;}
 
 .road .map {
     position: absolute;
@@ -2473,11 +2472,13 @@ footer>p {
 }
 
 
+/* 1400px 이상 1399px 이하 구간 */
+@media(min-width:1400px) and (max-width:1399px) {}
 
 
 
-/* 1280px 이상 1599px 이하 구간 */
-@media(min-width:1280px) and (max-width:1599px) {
+/* 1280px 이상 1399px 이하 구간 */
+@media(min-width:1280px) and (max-width:1399px) {
 
 /* 메인 상세 설정 */
 /* --------- 헤더 설정 ------ */
@@ -2523,28 +2524,28 @@ footer>p {
 
 /* --------- 2. 카테고리 설정 ------ */
     .circle1 {
-        left: 30%;
+        left: 36%;
         top: 6%;
         transform: scale(0.9);}
 
     .circle2 {
-        left: 47%;
-        top: 19%;
-        transform: scale(0.9);}
+        left: 55%;
+        top: 17%;
+        transform: scale(0.8);}
 
     .circle3 {
-        left: 30%;
-        top: 46%;
-        transform: scale(0.9);}
+        left: 35%;
+        top: 44%;
+        transform: scale(0.8);}
 
     .circle4 {
-        left: 50%;
+        left: 58%;
         top: 64%;
-        transform: scale(0.9);}
+        transform: scale(0.8);}
 
     .circle5 {
-        left: 17%;
-        top: 78%;
+        left: 24%;
+        top: 80%;
         transform: scale(0.9);}
 
 
@@ -2552,34 +2553,41 @@ footer>p {
     width: 50%;
     height: 500px;}
 
-.txtMove p{transform: scale(0.8);}
+.txtMove p{}
 
     .txtMove p:nth-child(1) {
-        left: 70%;
+        font-size: 80px;
+        left: 73%;
         top: 25px;}
 
     .txtMove p:nth-child(2) {
+        font-size: 50px;
         left: 85%;
         top: 230px;} 
 
     .txtMove p:nth-child(3) {
+        font-size: 40px;
         left: 65%;
         top: 350px;}
 
     .txtMove p:nth-child(4) {
+        font-size: 50px;
         left: 95%;
         top: 400px;}
 
     .txtMove p:nth-child(5) {
+        font-size: 50px;
         left: 80%;
         top: 500px;}
 
     .txtMove p:nth-child(6) {
+        font-size: 40px;
         left: 90%;
         top: 600px;}
 
     .txtMove p:nth-child(7) {
-        left: 65%;
+        font-size: 20px;
+        left: 76%;
         top: 680px;}
 
 
@@ -2872,7 +2880,6 @@ footer>p {
 }
 
 
-}
 
 
 
