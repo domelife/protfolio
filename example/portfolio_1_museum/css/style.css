@@ -334,40 +334,54 @@ nav .gnb li i {
         font-size:120px;
         left: 65%;
         top: 30px;
+        text-shadow: 0 0 13px #fff;
         animation:ani1 5s 1s linear infinite}
 
     .txtMove p:nth-child(2) {
         font-size: 60px;
         left: 80%;
         top: 250px;
+        text-shadow: 0 0 13px #fff;
         animation:ani2 7s 0.5s linear infinite} 
 
     .txtMove p:nth-child(3) {
         left: 60%;
         top: 400px;
+        text-shadow: 0 0 13px #fff;
         animation:ani3 5s linear infinite}
 
     .txtMove p:nth-child(4) {
         font-size: 70px;
         left: 90%;
         top: 500px;
+        text-shadow: 0 0 13px #fff;
         animation:ani1 4s 1.5s linear infinite}
 
     .txtMove p:nth-child(5) {
         left: 75%;
         top: 600px;
+        text-shadow: 0 0 13px #fff;
         animation:ani1 5s 0.8s linear infinite}
 
     .txtMove p:nth-child(6) {
         left: 95%;
         top: 700px;
+        text-shadow: 0 0 13px #fff;
         animation:ani3 10s linear infinite}
 
     .txtMove p:nth-child(7) {
         font-size:40px;
         left: 58%;
         top: 800px;
+        text-shadow: 0 0 13px #fff;
         animation:ani2 8s linear infinite}
+
+    .txtMove p:nth-child(8) {
+        font-size:60px;
+        left: 90%;
+        top: 100px;
+        text-shadow: 0 0 13px #fff;
+        animation:ani3 5s linear infinite}
 
 @keyframes ani1 {
     0% {opacity: 0.7;
@@ -602,7 +616,8 @@ nav .gnb li i {
 .select .time p {
     font-size: 15px;
     border-bottom: solid 1px #111;
-    padding: 5px 20px;}
+    padding: 5px 20px;
+    cursor: pointer;}
 
 
 .select .people {
@@ -630,7 +645,8 @@ nav .gnb li i {
         background-color: #999;
         border-radius: 4px;
         margin: 3px 5px;
-        padding: 0 15px;}
+        padding: 0 15px;
+        cursor: pointer;}
 
     .pm .num {    
         color: #000;
@@ -642,7 +658,8 @@ nav .gnb li i {
         font-size: 13px; 
         background-color: #222;
         border-radius: 4px;
-        padding: 0 15px;}
+        padding: 0 15px;
+        cursor: pointer;}
 
 .select .people .btn01 {
     display: flex;
@@ -719,7 +736,7 @@ nav .gnb li i {
         width: 800px;
         height: 650px;
         background-color: #fff;
-        background-image: url(../img/floor_info-1.png);
+        background-image: url(../img/B1.gif);
         background-repeat: no-repeat;
         background-size: 800px;
         background-position: center;
@@ -746,11 +763,14 @@ nav .gnb li i {
     font-size: 30px;
     margin: 10px 0;
     padding: 5px 10px;
-    border-bottom: #fff 1px solid ;}
+    border-bottom: #fff 1px solid ;
+    cursor: pointer;}
 
-    .guideMap .txtBox .flow li:nth-child(1) {
+    .guideMap .txtBox .flow li.on {
         color: #000;
         text-shadow: 0 0px 7px #d5b622;}
+
+    
 
 
 
@@ -760,7 +780,8 @@ nav .gnb li i {
 .guideMap .location p {
     font-weight:300;
     font-size: 20px;
-    margin: 10px 0;}
+    margin: 10px 0;
+    cursor: pointer;}
 
 .guideMap .location p span {
     display: inline-block;
@@ -772,7 +793,7 @@ nav .gnb li i {
     border-radius: 10% ;
     border: #d5b622 1px solid;}
 
-    .location p:nth-child(2) span {
+    .location p.on span {
         background-color: #d5b622;
         box-shadow: 0 0 7px 2px #d5b622;}
 
@@ -981,27 +1002,38 @@ nav .gnb li i {
     .road .mountain .m1 {
         position: absolute;
         left: 1%;
-        top: 22%;}
+        top: 22%;
+        animation: ani4 3s linear;}
 
     .road .mountain .m2 {
         position: absolute;
         left: 20%;
-        top: 23%;}
+        top: 23%;
+        animation: ani4 1.5s linear;}
 
     .road .mountain .m3 {
         position: absolute;
         left: 35%;
-        top: 15%;}
+        top: 15%;
+        animation: ani4 1s linear;}
 
     .road .mountain .m4 {
         position: absolute;
         left: 58%;
-        top: 22%;}
+        top: 22%;
+        animation: ani4 2s linear;}
 
     .road .mountain .m5 {
         position: absolute;
         left: 72%;
-        top: 22%;}
+        top: 22%;
+        animation: ani4 3.5s linear;}
+
+        @keyframes ani4 {
+            0% {opacity: 0;
+                transform: translateY(100px);} 
+            100% {opacity: 1;
+                transform: translateY(0);}}
 
 
 .road .wrap {
@@ -1747,9 +1779,9 @@ nav .gnb li i {
         width: 800px;
         height: 650px;
         background-color: #fff;
-        background-image: url(../img/floor_info-1.png);
+        background-image: url(../img/B1.jpg);
         background-repeat: no-repeat;
-        background-size: 800px;
+        background-size: 600px;
         background-position: center;
         clip-path: polygon(54% 4%, 85% 15%, 97% 48%, 93% 69%, 95% 88%, 80% 98%, 35% 96%, 3% 81%, 0 38%, 18% 8%);
         box-shadow: 10px 10px 20px 20px #050505;}
@@ -1776,7 +1808,7 @@ nav .gnb li i {
     padding: 5px 10px;
     border-bottom: #fff 1px solid ;}
 
-    .guideMap .txtBox .flow li:nth-child(1) {
+    .guideMap .txtBox .flow li.on {
         color: #000;
         text-shadow: 0 0px 7px #d5b622;}
 
@@ -1800,7 +1832,7 @@ nav .gnb li i {
     border-radius: 10% ;
     border: #d5b622 1px solid;}
 
-    .location p:nth-child(2) span {
+    .location p.on span {
         background-color: #d5b622;
         box-shadow: 0 0 7px 2px #d5b622;}
 
