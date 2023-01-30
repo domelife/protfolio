@@ -1,46 +1,8 @@
-/* 언어 설정 */
-@charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
-
-
-/* 전체 설정 */
-*{margin: 0; padding: 0;}
-ul {list-style: none;}
-a {text-decoration: none;
-    color: #fff;}
-img {border: none;
-    vertical-align: bottom;}
-body {font-family:'Noto Sans KR', sans-serif;
-    /* font-family: 'EB Garamond', serif; */
-    background-color: #111;
-    overflow-x: hidden;}
-
-
-/* 기본 설정 */
-.page {}
-
-header {
-    width: 100%;
-    height: 100px;}
-
-section {
-    width: 100%;
-    height: 1024px; /* 임시 설정*/
-    border-bottom: #fff 1px solid;}
-
-.road {
-    width: 100%;}
-
-footer {
-    width: 100%;
-    height: 500px;
-    background-color: #555;}
-
-
-
-
+    
+/*############################### 미디어 쿼리 구간 설정 ###################################*/
+/* 1699px 이상 구간 */
+@media (min-width:1699px) {
 /* 메인 상세 설정 */
 /* --------- 헤더 설정 ------ */
 header {}
@@ -206,14 +168,7 @@ nav .gnb li i {
         top: 12%;
         z-index: 3;}
 
-    .main .imgBox li:nth-child(3) {
-        position: absolute;
-        left: 85%;
-        margin-left: -260px;
-        top: 0%;
-        z-index: 3;
-        transform: scale(0.75);
-        display: none;}
+    .main .imgBox li:nth-child(3) {}
 
 .main>.imgBox>img {
     position: absolute;
@@ -334,54 +289,40 @@ nav .gnb li i {
         font-size:120px;
         left: 65%;
         top: 30px;
-        text-shadow: 0 0 13px #fff;
         animation:ani1 5s 1s linear infinite}
 
     .txtMove p:nth-child(2) {
         font-size: 60px;
         left: 80%;
         top: 250px;
-        text-shadow: 0 0 13px #fff;
         animation:ani2 7s 0.5s linear infinite} 
 
     .txtMove p:nth-child(3) {
         left: 60%;
         top: 400px;
-        text-shadow: 0 0 13px #fff;
         animation:ani3 5s linear infinite}
 
     .txtMove p:nth-child(4) {
         font-size: 70px;
         left: 90%;
         top: 500px;
-        text-shadow: 0 0 13px #fff;
         animation:ani1 4s 1.5s linear infinite}
 
     .txtMove p:nth-child(5) {
         left: 75%;
         top: 600px;
-        text-shadow: 0 0 13px #fff;
         animation:ani1 5s 0.8s linear infinite}
 
     .txtMove p:nth-child(6) {
         left: 95%;
         top: 700px;
-        text-shadow: 0 0 13px #fff;
         animation:ani3 10s linear infinite}
 
     .txtMove p:nth-child(7) {
         font-size:40px;
         left: 58%;
         top: 800px;
-        text-shadow: 0 0 13px #fff;
         animation:ani2 8s linear infinite}
-
-    .txtMove p:nth-child(8) {
-        font-size:60px;
-        left: 90%;
-        top: 100px;
-        text-shadow: 0 0 13px #fff;
-        animation:ani3 5s linear infinite}
 
 @keyframes ani1 {
     0% {opacity: 0.7;
@@ -435,7 +376,7 @@ nav .gnb li i {
         margin-left: -150px;
         top: 30%;
         margin-top: -350px;
-        transform: scale(0.7) ;
+        transform: scale(0.7);
         z-index: 888;}
     .info .imgBox .list02 {
         position: absolute;
@@ -616,8 +557,7 @@ nav .gnb li i {
 .select .time p {
     font-size: 15px;
     border-bottom: solid 1px #111;
-    padding: 5px 20px;
-    cursor: pointer;}
+    padding: 5px 20px;}
 
 
 .select .people {
@@ -645,8 +585,7 @@ nav .gnb li i {
         background-color: #999;
         border-radius: 4px;
         margin: 3px 5px;
-        padding: 0 15px;
-        cursor: pointer;}
+        padding: 0 15px;}
 
     .pm .num {    
         color: #000;
@@ -658,8 +597,7 @@ nav .gnb li i {
         font-size: 13px; 
         background-color: #222;
         border-radius: 4px;
-        padding: 0 15px;
-        cursor: pointer;}
+        padding: 0 15px;}
 
 .select .people .btn01 {
     display: flex;
@@ -732,24 +670,18 @@ nav .gnb li i {
     left: 25%;
     top: 20%;}
 
-    .guideMap .imgBox #clippath {
+    .guideMap .imgBox .clippath {
         width: 800px;
         height: 650px;
         background-color: #fff;
         background-image: url(../img/B1.jpg);
         background-repeat: no-repeat;
-        background-size: 550px;
+        background-size: 600px;
         background-position: center;
         clip-path: polygon(54% 4%, 85% 15%, 97% 48%, 93% 69%, 95% 88%, 80% 98%, 35% 96%, 3% 81%, 0 38%, 18% 8%);
-        box-shadow: 10px 10px 20px 20px #050505;
-        transition: all 0.5s;}
+        box-shadow: 10px 10px 20px 20px #050505;}
 
-        .guideMap .imgBox #clippath.on1 {
-            background-image: url(../img/2.jpg);}
-        .guideMap .imgBox #clippath.on2 {
-            background-image: url(../img/1.jpg);}
-        .guideMap .imgBox #clippath.on3 {
-            background-image: url(../img/B1.jpg);}
+
 
 .guideMap .txtBox {
     position: absolute;
@@ -769,14 +701,11 @@ nav .gnb li i {
     font-size: 30px;
     margin: 10px 0;
     padding: 5px 10px;
-    border-bottom: #fff 1px solid ;
-    cursor: pointer;}
+    border-bottom: #fff 1px solid ;}
 
     .guideMap .txtBox .flow li.on {
         color: #000;
         text-shadow: 0 0px 7px #d5b622;}
-
-    
 
 
 
@@ -786,8 +715,7 @@ nav .gnb li i {
 .guideMap .location p {
     font-weight:300;
     font-size: 20px;
-    margin: 10px 0;
-    cursor: pointer;}
+    margin: 10px 0;}
 
 .guideMap .location p span {
     display: inline-block;
@@ -867,8 +795,8 @@ nav .gnb li i {
                 height: 100%;
                 transition: all 1s;}
 
-                .polygon01.on .door01{left: -100%;}
-                .polygon01.on .door02{right: -100%;}
+                .polygon01:hover .door01{left: -100%;}
+                .polygon01:hover .door02{right: -100%;}
 
     .polygon02 {
         position: absolute;
@@ -1008,42 +936,32 @@ nav .gnb li i {
     .road .mountain .m1 {
         position: absolute;
         left: 1%;
-        top: 22%;
-        animation: ani4 3s linear;}
+        top: 22%;}
 
     .road .mountain .m2 {
         position: absolute;
         left: 20%;
-        top: 23%;
-        animation: ani4 1.5s linear;}
+        top: 23%;}
 
     .road .mountain .m3 {
         position: absolute;
         left: 35%;
-        top: 15%;
-        animation: ani4 1s linear;}
+        top: 15%;}
 
     .road .mountain .m4 {
         position: absolute;
         left: 58%;
-        top: 22%;
-        animation: ani4 2s linear;}
+        top: 22%;}
 
     .road .mountain .m5 {
         position: absolute;
         left: 72%;
-        top: 22%;
-        animation: ani4 3.5s linear;}
-
-        @keyframes ani4 {
-            0% {opacity: 0;
-                transform: translateY(100px);} 
-            100% {opacity: 1;
-                transform: translateY(0);}}
+        top: 22%;}
 
 
 .road .wrap {
-    display: flex;}
+    display: flex;
+}
 
 .road .map {
     position: absolute;
@@ -1091,21 +1009,829 @@ footer>p {
 
 
 
+}
+
+
+
+
+/* 1500px 이상 1698px 이하구간 */
+@media (min-width:1500px) and (max-width:1698px) {
+
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+.wrap h1 {
+    transform:scale(0.8);}
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main .trip {
+    transform:scale(0.8);}
+
+.main .follow {
+    transform:scale(0.8);}
+
+.main .txtBox {
+    transform:scale(0.9);
+    top: 25%}
+
+    .main .txtBox .on .txt {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 350px;
+        color: #fff;}
+
+    .main .imgBox li:nth-child(1) {
+        top: 10%;
+        transform:scale(0.9);}
+
+    .main .imgBox li:nth-child(2) {
+        margin-left: -230px;
+        top: 8%;
+        transform:scale(0.9);
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main .deco img {
+    transform: scale(0.9);}
+
+.main .go {
+    transform: scale(0.8);}
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+    .circle1 {
+        left: 30%;
+        top: 6%;
+        transform: scale(0.9);}
+
+    .circle2 {
+        left: 47%;
+        top: 19%;
+        transform: scale(0.9);}
+
+    .circle3 {
+        left: 30%;
+        top: 46%;
+        transform: scale(0.9);}
+
+    .circle4 {
+        left: 50%;
+        top: 64%;
+        transform: scale(0.9);}
+
+    .circle5 {
+        left: 17%;
+        top: 78%;
+        transform: scale(0.9);}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{transform: scale(0.8);}
+
+    .txtMove p:nth-child(1) {
+        left: 70%;
+        top: 25px;}
+
+    .txtMove p:nth-child(2) {
+        left: 85%;
+        top: 230px;} 
+
+    .txtMove p:nth-child(3) {
+        left: 65%;
+        top: 350px;}
+
+    .txtMove p:nth-child(4) {
+        left: 95%;
+        top: 400px;}
+
+    .txtMove p:nth-child(5) {
+        left: 80%;
+        top: 500px;}
+
+    .txtMove p:nth-child(6) {
+        left: 90%;
+        top: 600px;}
+
+    .txtMove p:nth-child(7) {
+        left: 65%;
+        top: 680px;}
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;}
+
+.info .half {
+    transform: scale(0.9);}
+
+.info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        z-index: 40;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
+
+    .info .imgBox ul .txt {
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -507px;
+        z-index: 3;
+        transform: scale(0.9);}
+
+    .flower {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 60%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+        
+    .line {
+        position: absolute;
+        width: 300px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    left: 63%;
+    top: 50%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 30px;}
+
+    .btn .top {}
+    .btn .bottom {}
+
+
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    transform: scale(0.9);}
+
+
+/* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;}
+
+.floor h2 {
+    left: 12%;
+    top: 10%;}
+
+.guideMap {
+    transform: scale(0.9);}
+
+.guideMap .imgBox {
+    position: absolute;
+    z-index: 999;
+    left: 20%;
+    top: 20%;}
+
+
+.guideMap .txtBox {
+    position: absolute;
+    right: 10%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
+
+
+.guideMap .bg {
+    right: -10%;}
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {}
+
+    .polygon01 {
+        transform: scale(0.9);}
+
+    .polygon02 {
+        transform: scale(0.9);}
+
+.notice .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+        
+    .notice .imgBox .pattern01 {
+        left: 10%;
+        top: 1%;
+        transform: scale(0.9);}
+        
+    .notice .imgBox .pattern02 {
+        right: 18%;
+        transform: scale(0.9);} 
+
+    .notice .imgBox .bird01{
+        transform: scale(0.9);}
+
+    .notice .imgBox .bird02{
+        transform: scale(0.9);}
+
+.notice .con {
+    transform: scale(0.9);}
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {}
+
+    .road .mun {    
+        left: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .sun {    
+        right: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .mountain .m1 {
+        left: -2%;
+        top: 24%;
+        transform: scale(0.8);}
+
+    .road .mountain .m2 {
+        left: 18%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m3 {
+        left: 31%;
+        top: 19%;
+        transform: scale(0.8);}
+
+    .road .mountain .m4 {
+        left: 56%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m5 {
+        left: 68%;
+        top: 23%;
+        transform: scale(0.8);}
+
+
+.road .wrap {
+    display: flex;
+}
+
+.road .map {
+    position: absolute;
+    left: -5%;
+    top: 54%;
+    transform: scale(0.8);}
+
+.road .txt {
+    position: absolute;
+    right: 13%;
+    top: 56%;
+    transform: scale(0.9);}
+
+.road .txt ul {list-style:square;}
+.road .txt li {margin-bottom: 60px;}
+
+.road .txt h4{
+    font-size: 27px;
+    margin-bottom: 10px;}
+
+.road .txt p {
+    font-size: 20px;}
+
+/* --------- 7. 마지막!!!!!!!! 푸터 설정 ------ */
+footer {}
+
+footer div {
+    font-size: 20px;}
+
+footer>p {
+    font-size: 15px;}
+
+}
+
+
+/* 1400px 이상 1399px 이하 구간 */
+@media(min-width:1400px) and (max-width:1399px) {}
+
+
+
+/* 1280px 이상 1399px 이하 구간 */
+@media(min-width:1280px) and (max-width:1399px) {
+
+/* 메인 상세 설정 */
+/* --------- 헤더 설정 ------ */
+.wrap h1 {
+    transform:scale(0.8);}
+
+/* --------- 1. 메인섹션 설정 ------ */
+.main .trip {
+    transform:scale(0.8);}
+
+.main .follow {
+    transform:scale(0.8);}
+
+.main .txtBox {
+    transform:scale(0.8);
+    top: 25%}
+
+    .main .txtBox .on .txt {
+        font-size: 15px;
+        font-weight: 100;
+        margin-top: 350px;
+        color: #fff;}
+
+    .main .imgBox li:nth-child(1) {
+        top: 10%;
+        transform:scale(0.7);}
+
+    .main .imgBox li:nth-child(2) {
+        margin-left: -230px;
+        top: 8%;
+        transform:scale(0.8);
+        z-index: 3;}
+
+    .main .imgBox li:nth-child(3) {}
+
+.main .deco img {
+    transform: scale(0.9);}
+
+.main .go {
+    transform: scale(0.8);}
+
+
+
+/* --------- 2. 카테고리 설정 ------ */
+    .circle1 {
+        left: 36%;
+        top: 6%;
+        transform: scale(0.9);}
+
+    .circle2 {
+        left: 55%;
+        top: 17%;
+        transform: scale(0.8);}
+
+    .circle3 {
+        left: 35%;
+        top: 44%;
+        transform: scale(0.8);}
+
+    .circle4 {
+        left: 58%;
+        top: 64%;
+        transform: scale(0.8);}
+
+    .circle5 {
+        left: 24%;
+        top: 80%;
+        transform: scale(0.9);}
+
+
+.txtMove {
+    width: 50%;
+    height: 500px;}
+
+.txtMove p{}
+
+    .txtMove p:nth-child(1) {
+        font-size: 80px;
+        left: 73%;
+        top: 25px;}
+
+    .txtMove p:nth-child(2) {
+        font-size: 50px;
+        left: 85%;
+        top: 230px;} 
+
+    .txtMove p:nth-child(3) {
+        font-size: 40px;
+        left: 65%;
+        top: 350px;}
+
+    .txtMove p:nth-child(4) {
+        font-size: 50px;
+        left: 95%;
+        top: 400px;}
+
+    .txtMove p:nth-child(5) {
+        font-size: 50px;
+        left: 80%;
+        top: 500px;}
+
+    .txtMove p:nth-child(6) {
+        font-size: 40px;
+        left: 90%;
+        top: 600px;}
+
+    .txtMove p:nth-child(7) {
+        font-size: 20px;
+        left: 76%;
+        top: 680px;}
+
+
+
+/* --------- 3. 체헝안내 설정 ------ */
+.info {
+    position: relative;
+    overflow: hidden;}
+
+.info .half {
+    transform: scale(0.9);}
+
+.info .imgBox li {}
+
+    .info .imgBox .list01 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: -350px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list02 {
+        position: absolute;
+        left: 37%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -250px;
+        transform: scale(1.1);
+        z-index: 999;}
+    .info .imgBox .list03 {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 30%;
+        margin-top: 230px;
+        transform: scale(0.7);
+        z-index: 888;}
+    .info .imgBox .list04 {
+        display: none;}
+    .info .imgBox .list05 {
+        display: none;}
+
+
+.info .imgBox li>div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    background-color: #fff;
+    overflow: hidden;}
+
+    .info .imgBox>ul>li>div img {
+        width: 300px;
+        z-index: 40;
+        }
+
+    .info .imgBox ul .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 7px 15px;}
+
+        .info .imgBox ul .on .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;}
+
+    .info .imgBox ul .txt {
+        font-size: 10px;
+        margin: 0 15px;}
+
+    .info .imgBox ul .on .txt {
+        font-size: 5px;
+        margin: 0 15px;}
+
+    .pan {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -507px;
+        z-index: 3;
+        transform: scale(0.9);}
+
+    .flower {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 1300px;
+        opacity: 0.4;
+        z-index: 1;}
+
+    .pattern {
+        position: absolute;
+        left: 3%;
+        top: 60%;}
+
+    .panline {
+        position: absolute;
+        width: 155px;
+        right: -10px;
+        top: 50%;
+        margin-top: -200px;
+        z-index: 50;}
+        
+    .line {
+        position: absolute;
+        width: 300px;
+        height: 800px;
+        left: 40%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -400px;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    left: 63%;
+    top: 50%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 30px;}
+
+    .btn .top {}
+    .btn .bottom {}
 
 
 
 
 
 
+/* --------- 4. 체험예약 설정 ------ */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;}
+
+.reservation .con {
+    transform: scale(0.9);}
+
+
+/* --------- 5. 층별안내 설정 ------ */
+.floor {
+    position: relative;
+    background-image: url(../img/floor4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;}
+
+.floor h2 {
+    left: 12%;
+    top: 10%;}
+
+.guideMap {
+    transform: scale(0.9);}
+
+.guideMap .imgBox {
+    position: absolute;
+    z-index: 999;
+    left: 20%;
+    top: 20%;}
+
+
+.guideMap .txtBox {
+    position: absolute;
+    right: 10%;
+    top: 31%;
+    color: #fff;
+    z-index: 90;}
+
+
+.guideMap .bg {
+    right: -10%;}
+
+
+
+
+/* --------- 6. 공지사항 설정 ------ */
+.notice {}
+
+    .polygon01 {
+        transform: scale(0.9);}
+
+    .polygon02 {
+        transform: scale(0.9);}
+
+.notice .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+        
+    .notice .imgBox .pattern01 {
+        left: 10%;
+        top: 1%;
+        transform: scale(0.9);}
+        
+    .notice .imgBox .pattern02 {
+        right: 18%;
+        transform: scale(0.9);} 
+
+    .notice .imgBox .bird01{
+        transform: scale(0.9);}
+
+    .notice .imgBox .bird02{
+        transform: scale(0.9);}
+
+.notice .con {
+    transform: scale(0.9);}
+
+
+/* --------- 7. 오시는길 설정 ------ */
+.road {}
+
+    .road .mun {    
+        left: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .sun {    
+        right: 15%;
+        top: 5%;
+        transform: scale(0.9);}
+
+    .road .mountain .m1 {
+        left: -2%;
+        top: 24%;
+        transform: scale(0.8);}
+
+    .road .mountain .m2 {
+        left: 18%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m3 {
+        left: 31%;
+        top: 19%;
+        transform: scale(0.8);}
+
+    .road .mountain .m4 {
+        left: 56%;
+        top: 26%;
+        transform: scale(0.8);}
+
+    .road .mountain .m5 {
+        left: 68%;
+        top: 23%;
+        transform: scale(0.8);}
+
+
+.road .wrap {
+    display: flex;
+}
+
+.road .map {
+    position: absolute;
+    left: -5%;
+    top: 54%;
+    transform: scale(0.8);}
+
+.road .txt {
+    position: absolute;
+    right: 13%;
+    top: 56%;
+    transform: scale(0.9);}
+
+.road .txt ul {list-style:square;}
+.road .txt li {margin-bottom: 60px;}
+
+.road .txt h4{
+    font-size: 27px;
+    margin-bottom: 10px;}
+
+.road .txt p {
+    font-size: 20px;}
+
+/* --------- 7. 마지막!!!!!!!! 푸터 설정 ------ */
+footer {}
+
+footer div {
+    font-size: 20px;}
+
+footer>p {
+    font-size: 15px;}
+
+}
 
 
 
 
 
+/* 1024px 이상 1279px 이하 구간 */
+@media(min-width:1024px) and (max-width:1279px) {}
 
 
+/* 780px 이상 1023px 이하 구간 */
+@media(min-width:780px) and (max-width:1023px) {}
 
 
+/* 640px 이상 779px 이하 구간 */
+@media(min-width:640px) and (max-width:780px) {}
 
 
+/* 480px 이상 639px 이하 구간 */
+@media(min-width:480px) and (max-width:639px) {}
 
+
+/* 479px 이하 구간 */
+@media(max-width:479px) {}

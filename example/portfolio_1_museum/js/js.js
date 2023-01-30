@@ -45,7 +45,7 @@ $(document).ready(function(){
 
         let sc = $(this).scrollTop();
 
-        //$('h1').text(sc)
+        $('.road h2').text(sc)
 
         
         let ht = $(window).height();
@@ -61,6 +61,32 @@ $(document).ready(function(){
             }
         }
 
+
+        // 6. 공지사항 쓰기
+        if(sc>4800 && sc<5200){
+            $('.polygon01').addClass('on')
+
+        }
+
+        else if(sc>5200){
+            $('.polygon01').removeClass('on')
+        }
+
+        else if(sc<4000){
+            $('.polygon01').removeClass('on')
+        }
+
+
+        // 7. 오시는길
+        // if(sc>5800 && sc<6500){
+        //     $('.polygon01').addClass('on')
+
+        //     animate
+        // }
+
+        // else if(sc>5200){
+        //     $('.polygon01').removeClass('on')
+        // }
 
     })
 
@@ -131,9 +157,23 @@ $(document).ready(function(){
     $('.guideMap .txtBox .flow li').click(function(){
 
         let i = $(this).index();
+        let className ='on'+(i+1)
+        console.log(className)
 
         $('.guideMap .txtBox .flow li').removeClass('on')
         $('.guideMap .txtBox .flow li').eq(i).addClass('on')
+        
+
+        $('.guideMap .imgBox>div').removeClass()
+        $('.guideMap .imgBox>div').addClass(className)
+
+        // $('.guideMap .imgBox>div').removeClass('on1')
+        // $('.guideMap .imgBox>div').removeClass('on3')
+        // $('.guideMap .imgBox>div').eq(i).addClass('on2')
+
+        // $('.guideMap .imgBox>div').removeClass('on1')
+        // $('.guideMap .imgBox>div').removeClass('on2')
+        // $('.guideMap .imgBox>div').eq(i).addClass('on3')
 
     })
 
