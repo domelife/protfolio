@@ -41,11 +41,47 @@ $(document).ready(function(){
     })
 
 
+    // 스크롤바의 위치값 찾아내기
+    $(window).scroll(function(){
+
+        let sc = $(this).scrollTop();
+
+        //$('h1').text(sc)
+
+        
+        let ht = $(window).height();
 
 
+        //반복문 설정
+        for(var ab=0; ab<9; ab++) {
+
+            if(sc>=ht*ab && sc<ht*(ab+1)){
+
+                $('section').removeClass('on')
+                $('section').eq(ab).addClass('on')
+            }
+        }
 
 
+    })
 
+    //마우스에서 휠을 올렸을 떄, 내렸을 떄 움직인다.
+    $('section').mousewheel(function(event,delta){
 
+        if(delta>0) {
+
+            //이전페이지로 이동
+            let prev = $(this).prev().offset().top;
+            $('html, body').stop().animate({scrollTop:prev}, 1400)
+        }
+
+        else if(delta<0) {
+
+            //다음페이지로 이동
+            let next = $(this).next().offset().top;
+            $('html, body').stop().animate({scrollTop:next}, 1400)
+            //animate 앞에는 stop을 항상 짝궁처럼 붙여다니기
+        }
+    })
 
 })
