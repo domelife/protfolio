@@ -45,7 +45,7 @@ $(document).ready(function(){
 
         let sc = $(this).scrollTop();
 
-        $('.road h2').text(sc)
+        $('.floor h2').text(sc)
 
         
         let ht = $(window).height();
@@ -60,6 +60,24 @@ $(document).ready(function(){
                 $('section').eq(ab).addClass('on')
             }
         }
+
+
+
+
+        // 5. 층별안내
+        if(sc>3500){
+            $('.flow').addClass('on')
+            $('.location').addClass('on')
+            $('.bg').addClass('on')
+        }
+
+        else if(sc<3500){
+            $('.flow').addClass('on')
+            $('.location').addClass('on')
+            $('.bg').addClass('on')
+        }
+    
+
 
 
         // 6. 공지사항 쓰기
@@ -78,17 +96,85 @@ $(document).ready(function(){
 
 
         // 7. 오시는길
-        // if(sc>5800 && sc<6500){
-        //     $('.polygon01').addClass('on')
+        if(sc>4970 && sc<10000){
+            $('.mountain').addClass('on')
 
-        //     animate
-        // }
+        }
 
-        // else if(sc>5200){
-        //     $('.polygon01').removeClass('on')
-        // }
+        else if(sc>10000){
+            $('.mountain').removeClass('on')
+        }
 
-    })
+        else if(sc<4970){
+            $('.mountain').removeClass('on')
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    //따라다니는 태그 설정 
+        // $('.txt p').eq(0).find('span').text(sc);
+        // scrolltop이 header높이값보다 커질때 logoFix는 fixd가 되어라.
+        if(sc>=hdht){
+            $('.logoFix').addClass('on')
+        }
+
+        else {
+            $('.logoFix').removeClass('on')
+        }
+    });
+            let hdht= $('section').eq(1).offset().top;
+
+
+
+
+
+    //따라오는 원 설정
+        $(window).scroll(function(){
+
+            // let i = $(this).scrollTop();
+            let aht =$('section').eq(1).offset().top;
+    
+            
+            if(sc>0 && sc<5000) {
+
+            $('section>article').removeClass('on')
+            $('section>article').eq(0).addClass('on')
+
+            $('.menu li').removeClass('on')
+            $('.menu li').eq(0).addClass('on')
+        }
+
+
+            $('.main .follow').css({'left':'47%'}).animate({scrollTop:aht},800)
+            // $('.main .follow').stop()
+    
+    
+        })
+        
+        
+
+            
+    
+
+
+
+
+
+
+
+
+
+
 
     //마우스에서 휠을 올렸을 떄, 내렸을 떄 움직인다.
     $('section').mousewheel(function(event,delta){

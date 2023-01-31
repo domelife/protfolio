@@ -53,7 +53,8 @@ header .wrap {
     padding-right: 100px;
     box-sizing: border-box;
     text-align: center;
-    line-height: 3.2;}
+    line-height: 3.2;
+    cursor: pointer;}
 
 .wrap nav {
     display: flex;
@@ -104,6 +105,24 @@ nav .gnb li i {
 
 
 
+/* 픽스된 로고이미지 설정 */
+.logoFix {position: absolute;
+    left: -100%;}
+
+    .logoFix.on {    
+        position: fixed;
+        left: 0%;
+        top: 0;
+        transition: all 0.15s;
+        z-index: 100000;}
+
+.logoFix img {
+    width: 150px;
+    }
+
+
+
+
 /* --------- 1. 메인섹션 설정 ------ */
 .main {
     position: relative;
@@ -143,7 +162,7 @@ nav .gnb li i {
     border-radius:50% ;
     background-color: #fff;
     box-shadow: 0 0 30px 5px #d5b622;
-    display: none;}
+    /* display: none;*/} 
 
 .main .txtBox {
     position: absolute;
@@ -227,7 +246,8 @@ nav .gnb li i {
     position: absolute;
     width: 55px;
     left: 68.5%;
-    top: 45%;}
+    top: 45%;
+    cursor: pointer;}
 
 
 .main .go {
@@ -244,7 +264,7 @@ nav .gnb li i {
     text-align: center;
     line-height: 2.2;
     z-index: 999;
-}
+    cursor: pointer;}
 
 
 
@@ -254,7 +274,8 @@ nav .gnb li i {
     background-image: url(../img/category\(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;}
+    background-position: left top;
+    overflow: hidden;}
 
 .category div {
     display: flex;
@@ -271,6 +292,7 @@ nav .gnb li i {
         border-radius:50% ;
         background-color: #fff;
         font-size: 22px;
+        cursor: pointer;
         box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle2 {
@@ -282,6 +304,7 @@ nav .gnb li i {
         border-radius:50% ;
         background-color: #fff;
         font-size: 33px;
+        cursor: pointer;
         box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle3 {
@@ -293,6 +316,7 @@ nav .gnb li i {
         border-radius:50% ;
         background-color: #fff;
         font-size: 25px;
+        cursor: pointer;
         box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle4 {
@@ -305,6 +329,7 @@ nav .gnb li i {
         background-color: #fff;
         text-align: center;
         font-size: 27px;
+        cursor: pointer;
         box-shadow: 0 0 30px 5px #d5b622;}
 
     .circle5 {
@@ -316,6 +341,7 @@ nav .gnb li i {
         border-radius:50% ;
         background-color: #fff;
         font-size: 22px;
+        cursor: pointer;
         box-shadow: 0 0 30px 5px #d5b622;}
 
 
@@ -427,7 +453,7 @@ nav .gnb li i {
 .info .imgBox ul {}
 
 
-.info .imgBox li {}
+.info .imgBox li {cursor: pointer;}
 
     .info .imgBox .list01 {
         position: absolute;
@@ -536,10 +562,11 @@ nav .gnb li i {
     top: 50%;
     margin-top: -40px;
     color: #fff;
+    z-index: 9999;
     font-size: 30px;}
 
-    .btn .top {}
-    .btn .bottom {}
+    .btn .top {cursor: pointer;}
+    .btn .bottom {cursor: pointer;}
 
 
 
@@ -730,7 +757,8 @@ nav .gnb li i {
     position: absolute;
     z-index: 999;
     left: 25%;
-    top: 20%;}
+    top: 20%;
+    animation: ani5 1.2s linear;}
 
     .guideMap .imgBox #clippath {
         width: 800px;
@@ -741,7 +769,8 @@ nav .gnb li i {
         background-size: 550px;
         background-position: center;
         clip-path: polygon(54% 4%, 85% 15%, 97% 48%, 93% 69%, 95% 88%, 80% 98%, 35% 96%, 3% 81%, 0 38%, 18% 8%);
-        box-shadow: 10px 10px 20px 20px #050505;
+        -webkit-box-shadow: 0 0 10px 10px #2B2B2B;
+        box-shadow: 0 0 30px 30px #2B2B2B;
         transition: all 0.5s;}
 
         .guideMap .imgBox #clippath.on1 {
@@ -764,11 +793,14 @@ nav .gnb li i {
     font-family: 'EB Garamond', serif;
     font-weight: 700;}
 
+    .guideMap .txtBox .flow.on {animation: ani5 2s linear;} 
+
 .guideMap .txtBox .flow li {
     font-weight:300;
     font-size: 30px;
     margin: 10px 0;
     padding: 5px 10px;
+    transition: all 0.5s;
     border-bottom: #fff 1px solid ;
     cursor: pointer;}
 
@@ -783,10 +815,13 @@ nav .gnb li i {
 .guideMap .txtBox .location {
     margin-top: 40px;}
 
+    .guideMap .txtBox .location.on {
+    animation: ani5 1.5s linear;}
+
 .guideMap .location p {
     font-weight:300;
     font-size: 20px;
-    margin: 10px 0;
+    margin: 10px 0;   
     cursor: pointer;}
 
 .guideMap .location p span {
@@ -796,7 +831,8 @@ nav .gnb li i {
     left: 90%;
     top: 10%;
     margin-right: 15px;
-    border-radius: 10% ;
+    border-radius: 10% ; 
+    transition: all 0.5s;
     border: #d5b622 1px solid;}
 
     .location p.on span {
@@ -806,8 +842,16 @@ nav .gnb li i {
 .guideMap .bg {
     position: absolute;
     right: 0;
-    top: 0;
-}
+    top: 0;}
+
+    .guideMap .bg.on {
+    animation: ani5 0.5s linear;}
+
+    @keyframes ani5 {
+        0% {opacity: 1;
+            transform: translateX(200px);} 
+        100% {opacity: 1;
+            transform: translateX(0);}}
 
 
 
@@ -867,8 +911,8 @@ nav .gnb li i {
                 height: 100%;
                 transition: all 1s;}
 
-                .polygon01.on .door01{left: -100%;}
-                .polygon01.on .door02{right: -100%;}
+                .polygon01.on .door01{left: -37%;}
+                .polygon01.on .door02{right: -37%;}
 
     .polygon02 {
         position: absolute;
@@ -937,7 +981,8 @@ nav .gnb li i {
     display: inline;
     text-align: center;
     padding: 5px 10px ;
-    border-bottom: #6b5c4e 5px solid;}
+    border-bottom: #6b5c4e 5px solid; 
+    cursor: pointer;}
 
 .notice .con ul {
     width: 100%;
@@ -949,7 +994,8 @@ nav .gnb li i {
     font-weight: bold;
     letter-spacing: -1px;
     padding: 20px 20px;
-    border-bottom: 2px solid #6b5c4e;}
+    border-bottom: 2px solid #6b5c4e;
+cursor: pointer;}
 
 
 
@@ -992,44 +1038,47 @@ nav .gnb li i {
     font-size: 40px;
     font-weight: 1000;
     letter-spacing: -2px;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;    
+    z-index: 99999;}
 
 .road h2 p {    
     display: inline;
     text-align: center;
     padding: 5px 10px ;
-    border-bottom: #31550d 5px solid;}
+    border-bottom: #31550d 5px solid;
+
+    cursor: pointer;}
 
 
 
 .road .mountain {
     display: flex;}
 
-    .road .mountain .m1 {
+    .road .mountain.on .m1 {
         position: absolute;
         left: 1%;
         top: 22%;
-        animation: ani4 3s linear;}
+        animation: ani4 3.5s linear;}
 
-    .road .mountain .m2 {
+    .road .mountain.on .m2 {
         position: absolute;
         left: 20%;
         top: 23%;
-        animation: ani4 1.5s linear;}
+        animation: ani4 2s linear;}
 
-    .road .mountain .m3 {
+    .road .mountain.on .m3 {
         position: absolute;
         left: 35%;
         top: 15%;
-        animation: ani4 1s linear;}
+        animation: ani4 1.5s linear;}
 
-    .road .mountain .m4 {
+    .road .mountain.on .m4 {
         position: absolute;
         left: 58%;
         top: 22%;
-        animation: ani4 2s linear;}
+        animation: ani4 2.5s linear;}
 
-    .road .mountain .m5 {
+    .road .mountain.on .m5 {
         position: absolute;
         left: 72%;
         top: 22%;
@@ -1047,7 +1096,7 @@ nav .gnb li i {
 
 .road .map {
     position: absolute;
-    left: 2%;
+    left: 5%;
     top: 58%;}
 
     .road .map img {
@@ -1055,7 +1104,7 @@ nav .gnb li i {
 
 .road .txt {
     position: absolute;
-    right: 20%;
+    right: 15%;
     top: 60%;}
 
 .road .txt ul {list-style:square;}
@@ -1083,6 +1132,8 @@ footer div {
     color: #fff;
     padding: 25px 0 ;
     border-bottom: #fff solid 1px;}
+
+    footer>div>p {cursor: pointer;}
 
 footer>p {
     padding: 40px 30px;
