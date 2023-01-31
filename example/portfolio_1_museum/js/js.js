@@ -45,7 +45,7 @@ $(document).ready(function(){
 
         let sc = $(this).scrollTop();
 
-        $('.floor h2').text(sc)
+        // $('.floor h2').text(sc)
 
         
         let ht = $(window).height();
@@ -65,16 +65,25 @@ $(document).ready(function(){
 
 
         // 5. 층별안내
-        if(sc>3500){
+        if(sc>3100 && sc<4500){
             $('.flow').addClass('on')
             $('.location').addClass('on')
             $('.bg').addClass('on')
+            $('.imgBox').addClass('on')
         }
 
-        else if(sc<3500){
-            $('.flow').addClass('on')
-            $('.location').addClass('on')
-            $('.bg').addClass('on')
+        else if(sc>4500){
+            $('.flow').removeClass('on')
+            $('.location').removeClass('on')
+            $('.bg').removeClass('on')
+            $('.imgBox').removeClass('on')
+        }
+
+        else if(sc<3100){
+            $('.flow').removeClass('on')
+            $('.location').removeClass('on')
+            $('.bg').removeClass('on')
+            $('.imgBox').removeClass('on')
         }
     
 
@@ -137,30 +146,24 @@ $(document).ready(function(){
 
 
 
-
     //따라오는 원 설정
         $(window).scroll(function(){
 
             // let i = $(this).scrollTop();
-            let aht =$('section').eq(1).offset().top;
+            // let aht =$('section').eq(1).offset().top;
     
-            
-            if(sc>0 && sc<5000) {
 
-            $('section>article').removeClass('on')
-            $('section>article').eq(0).addClass('on')
-
-            $('.menu li').removeClass('on')
-            $('.menu li').eq(0).addClass('on')
+        if(sc>a1ht){
+            $('.main .follow').css({'left':'47%'})
         }
-
-
-            $('.main .follow').css({'left':'47%'}).animate({scrollTop:aht},800)
-            // $('.main .follow').stop()
     
-    
-        })
-        
+        });
+
+            let a1ht= $('.circle2').offset().top;
+            // let a2ht= $('.info .half').offset().top;
+            // let a3ht= $('article').eq(2).offset().top;
+            // let a4ht= $('article').eq(3).offset().top;
+
         
 
             

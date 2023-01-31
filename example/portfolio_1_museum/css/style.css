@@ -746,6 +746,7 @@ nav .gnb li i {
         padding: 3px 7px;
         border-bottom: #d5b622 4px solid; }
 
+
 .guideMap {
     display: flex;
     justify-content: center;
@@ -757,8 +758,9 @@ nav .gnb li i {
     position: absolute;
     z-index: 999;
     left: 25%;
-    top: 20%;
-    animation: ani5 1.2s linear;}
+    top: 20%;}
+
+    .guideMap .imgBox.on {animation: ani5 1s linear;}
 
     .guideMap .imgBox #clippath {
         width: 800px;
@@ -793,7 +795,7 @@ nav .gnb li i {
     font-family: 'EB Garamond', serif;
     font-weight: 700;}
 
-    .guideMap .txtBox .flow.on {animation: ani5 2s linear;} 
+    .guideMap .txtBox .flow.on {animation: ani5 2.5s linear;} 
 
 .guideMap .txtBox .flow li {
     font-weight:300;
@@ -816,7 +818,7 @@ nav .gnb li i {
     margin-top: 40px;}
 
     .guideMap .txtBox .location.on {
-    animation: ani5 1.5s linear;}
+    animation: ani5 2s linear;}
 
 .guideMap .location p {
     font-weight:300;
@@ -845,13 +847,14 @@ nav .gnb li i {
     top: 0;}
 
     .guideMap .bg.on {
-    animation: ani5 0.5s linear;}
+    animation: ani5 1.5s linear;}
 
     @keyframes ani5 {
         0% {opacity: 1;
-            transform: translateX(200px);} 
+            transform: translateX(500px);} 
         100% {opacity: 1;
             transform: translateX(0);}}
+
 
 
 
